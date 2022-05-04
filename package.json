@@ -1,0 +1,19 @@
+{
+  "name": "movie-app-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junior-22/movie-app-client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Junior-22/movie-app-client/issues"
+  },
+  "homepage": "https://github.com/Junior-22/movie-app-client#readme"
+}
