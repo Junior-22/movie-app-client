@@ -6,3 +6,16 @@ Technologies used
 
 - React
 - Parcel
+
+<b>Usage</b>
+
+After cloning the repository, apply the following steps
+- To install Parcel v2 or recent, run npm install -g parcel@next 
+- To start the local server, run npm parcel src/index.html
+- Open the local server on the browser 
+
+<b>Contributions</b>
+
+- Pull requests are welcome
+
+
