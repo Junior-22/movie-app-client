@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+
 import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 
@@ -8,13 +10,21 @@ export class MainView extends React.Component {
   constructor() {
     super();
     this.state = {
-      movies: [
-        { _id: 1, Title: "Malcolm X", Year: "1992", Description: "Biographical epic of the controversial...", Genre: "Drama", Director: "Spike Lee", ImagePath: "..." },
-        { _id: 2, Title: "Furious 7", Year: "2015", Description: "Dom, Brian and the team have returned...", Genre: "Adventure", Director: "James Wan", ImagePath: "..." },
-        { _id: 3, Title: "The Old Guard", Year: "2020", Description: "A covert team of immortal mercenaries...", Genre: "Action", Director: "Gina Prince-Bythewood", ImagePath: "..." }
-      ],
+      movies: [],
       selectedMovie: null
     };
+  }
+
+  componentDidMount() {
+    axios.get("https://movies2022app.herokuapp.com/movies")
+      .then(response => {
+        this.setState({
+          movies: response.data
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   setSelectedMovie(newSelectedMovie) {
@@ -28,14 +38,14 @@ export class MainView extends React.Component {
 
     // if (selectedMovie) return <MovieView movieData={selectedMovie} />;
 
-    if (movies.length === 0) return <div className="main-view">The list is empty</div>;
+    if (movies.length === 0) return <div className="main-view" />;
 
     return (
       <div className="main-view">
         {selectedMovie
           ? <MovieView movieData={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
           : movies.map(movie => (
-            <MovieCard key={movie._id} movieData={movie} onMovieClick={(movie) => { this.setSelectedMovie(movie) }} />
+            <MovieCard key={movie._id} movieData={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }} />
           ))
         }
       </div>
