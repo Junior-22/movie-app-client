@@ -8,7 +8,7 @@ export class MovieView extends React.Component {
     return (
       <div className="movie-view">
         <div className="movie-poster">
-          <img src={movieData.ImagePath} />
+          <img src={movieData.ImagePath} crossorigin="true" />
         </div>
         <div className="movie-title">
           <span className="label">Title: </span>
@@ -24,11 +24,15 @@ export class MovieView extends React.Component {
         </div>
         <div className="movie-genre">
           <span className="label">Genre: </span>
-          <span className="value">{movieData.Genre}</span>
+          <span className="value">{movieData.Genre.Name}</span>
         </div>
         <div className="movie-director">
           <span className="label">Director: </span>
-          <span className="value">{movieData.Director}</span>
+          <span className="value">{movieData.Director.Name}</span>
+        </div>
+        <div className="movie-actors">
+          <span className="label">Actors: </span>
+          <span className="value">{movieData.Actors}</span>
         </div>
         <button onClick={() => { onBackClick(null); }}>Back</button>
       </div>
