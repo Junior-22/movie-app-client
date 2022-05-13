@@ -42176,7 +42176,7 @@ function NavbarView(user) {
         collapseOnSelect: true,
         expand: "lg",
         id: "navbar",
-        sticky: "top",
+        fixed: "top",
         __source: {
             fileName: "src/components/navbar-view/navbar-view.jsx",
             lineNumber: 9
