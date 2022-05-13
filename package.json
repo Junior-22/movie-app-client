@@ -4,7 +4,9 @@
   "description": "",
   "source": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.html",
+    "dev": "nodemon index.html"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-rc.0"
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "nodemon": "^2.0.16"
   }
 }
