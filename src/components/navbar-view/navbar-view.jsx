@@ -6,7 +6,7 @@ import "./navbar-view.scss";
 export function NavbarView(user) {
 
   return (
-    <Navbar collapseOnSelect expand="lg" id="navbar" sticky="top">
+    <Navbar collapseOnSelect expand="lg" id="navbar" fixed="top">
       <Container id="navbar-container">
         <Navbar.Brand id="navbar-brand" href="logo">Movie-app</Navbar.Brand>
         <Nav id="nav" className="ms-auto">
