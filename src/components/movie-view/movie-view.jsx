@@ -13,18 +13,18 @@ export class MovieView extends React.Component {
       <Container>
         <Row>
           <Col>
-            <Card className="movie-view">
+            <Card className="movie-view" id="movie-view">
               <Card.Body>
-                <Card.Img className="movie-poster" variant="top" src={movieData.ImagePath} crossorigin="true" />
-                <Card.Title className="movie-title">{movieData.Title}</Card.Title>
-                <Card.Year className="movie-year">{movieData.Year}</Card.Year>
-                <Card.Description className="movie-description">{movieData.Description}</Card.Description>
-                <Card.Genre className="movie-genre">{movieData.Genre.Name}</Card.Genre>
-                <Card.Director className="movie-director">{movieData.Director.Name}</Card.Director>
-                <Card.Actors className="movie-actors">{movieData.Actors}</Card.Actors>
+                <Card.Img className="movie-poster" id="movie-poster" variant="top" src={movieData.ImagePath} crossorigin="true" />
+                <Card.Title className="movie-title" id="movie.title">{movieData.Title}</Card.Title>
+                <Card.Text className="movie-year" id="movie-year"> Year: {movieData.Year}</Card.Text>
+                <Card.Text className="movie-description" id="movie-description"> Description: {movieData.Description}</Card.Text>
+                <Card.Text className="movie-genre" id="movie-genre"> Genre: {movieData.Genre.Name}</Card.Text>
+                <Card.Text className="movie-director" id="movie-director"> Director: {movieData.Director.Name}</Card.Text>
+                <Card.Text className="movie-actors" id="movie-actors"> Actors: {movieData.Actors}</Card.Text>
               </Card.Body>
             </Card>
-            <Button onClick={() => { onBackClick(null); }}>Back</Button>
+            <Button id="movie-view-button" onClick={() => { onBackClick(null); }}>Back</Button>
           </Col>
         </Row>
       </Container>
