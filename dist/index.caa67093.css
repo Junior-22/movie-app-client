@@ -8,11 +8,68 @@
   background-color: #b7e5ff;
   color: #33383a;
 }
+
+.movie-card {
+  border-color: #000000;
+  width: 20;
+}
+:root {
+  --fontsize-movie-title: 30px;
+  --fontweight-movie-title: 600;
+  --fontsize-movie-year: 20px;
+  --fontweight-movie-year: 300;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
   background-color: #b7e5ff;
   color: #33383a;
+}
+
+#movie-view {
+  border-color: #000000;
+  border-width: 10px;
+  min-height: 500px;
+}
+
+#movie-title {
+  margin-top: 20;
+  text-align: center;
+  font-size: var(--fontsize-movie-title);
+  font-weight: var(--fontweight-movie-title);
+}
+
+#movie-year {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-description {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-genre {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-director {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-actors {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-view-button {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-right: 20px;
+  border: black;
 }
 * {
   box-sizing: border-box;
@@ -25,6 +82,14 @@
   font-family: "Ubuntu", sans-serif;
   background-color: #b7e5ff;
   color: #33383a;
+}
+
+.login-view {
+  border-color: #000000;
+  border-width: 10px;
+  min-height: 500px;
+  margin-top: 100;
+  margin-bottom: 50;
 }
 :root {
   --fontsize-navbar-brand: 30px;
