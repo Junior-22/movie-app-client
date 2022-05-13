@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #b7e5ff;
+  color: #33383a;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #b7e5ff;
+  color: #33383a;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #b7e5ff;
+  color: #33383a;
+}
+:root {
+  --fontsize-navbar-brand: 30px;
+  --fontsize-navbar-link: 20px;
+  --fontweight-navbar-brand: 600;
+  --fontweight-navbar-link: 200;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#navbar {
+  background-color: #11aaff;
+  margin-bottom: 10px;
+  border: 5px;
+  border-color: #33383a;
+}
+
+#navbar-container {
+  background-color: #11aaff;
+  margin: 0;
+}
+
+#navbar-brand {
+  background-color: #11aaff;
+  color: #33383a;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+#nav {
+  background-color: #11aaff;
+}
+
+#nav-link {
+  background-color: #11aaff;
+  font-size: 20px;
+  font-weight: 200;
+  color: #33383a;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #b7e5ff;
+  color: #33383a;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #b7e5ff;
+  color: #33383a;
+}
+.movie-app {
+  color: #b7e5ff;
+  margin-top: 100px;
+}
+/*# sourceMappingURL=index.17d663fa.css.map */
