@@ -43,7 +43,7 @@ export function LoginView(props) {
                     onChange={e => setPassword(e.target.value)} />
                 </Form.Group>
 
-                <Button variant="primary" type="submit" onClick={handleSubmit}>Submit</Button>
+                <Button style={{ marginTop: 10 }} variant="primary" type="submit" onClick={handleSubmit}>Submit</Button>
               </Form>
             </Card.Body>
           </Card>
