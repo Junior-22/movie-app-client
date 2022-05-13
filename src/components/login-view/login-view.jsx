@@ -23,7 +23,7 @@ export function LoginView(props) {
       <Row>
         <Col></Col>
         <Col>
-          <Card style={{ marginTop: 100, marginBottom: 50, }}>
+          <Card className="login-view" id="login-view">
             <Card.Body>
               <Card.Title style={{ textAlign: "center", fontSize: 20 }}>Login</Card.Title>
               <Form>
