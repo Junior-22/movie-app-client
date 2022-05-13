@@ -9,11 +9,11 @@ export class MovieCard extends React.Component {
     const { movieData, onMovieClick } = this.props;
 
     return (
-      <Card style={{ width: "20rem" }}>
+      <Card className="movie-card" id="movie-card">
         <Card.Img variant="top" src={movieData.ImagePath} crossorigin="true" />
         <Card.Body>
-          <Card.Title>{movieData.Title}</Card.Title>
-          <Card.Text>{movieData.Description}</Card.Text>
+          <Card.Title id="movie-title">{movieData.Title}</Card.Title>
+          <Card.Text id="movie-description">{movieData.Description}</Card.Text>
           <Button onClick={() => onMovieClick(movieData)} variant="link">Open</Button>
         </Card.Body>
       </Card>
