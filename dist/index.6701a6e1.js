@@ -42262,8 +42262,10 @@ var _reactBootstrap = require("react-bootstrap");
 var _navbarViewScss = require("./navbar-view.scss");
 function NavbarView(user) {
     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Navbar, {
+        collapseOnSelect: true,
+        expand: "lg",
         id: "navbar",
-        fixed: "top",
+        sticky: "top",
         __source: {
             fileName: "src/components/navbar-view/navbar-view.jsx",
             lineNumber: 9
@@ -42279,7 +42281,7 @@ function NavbarView(user) {
             children: [
                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Navbar.Brand, {
                     id: "navbar-brand",
-                    href: "#",
+                    href: "logo",
                     __source: {
                         fileName: "src/components/navbar-view/navbar-view.jsx",
                         lineNumber: 11
@@ -42289,7 +42291,7 @@ function NavbarView(user) {
                 }),
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Nav, {
                     id: "nav",
-                    className: "me-auto",
+                    className: "ms-auto",
                     __source: {
                         fileName: "src/components/navbar-view/navbar-view.jsx",
                         lineNumber: 12
@@ -42325,6 +42327,16 @@ function NavbarView(user) {
                             },
                             __self: this,
                             children: "Register"
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav.Link, {
+                            id: "nav-link",
+                            href: "#logout",
+                            __source: {
+                                fileName: "src/components/navbar-view/navbar-view.jsx",
+                                lineNumber: 16
+                            },
+                            __self: this,
+                            children: "Logout"
                         })
                     ]
                 })
