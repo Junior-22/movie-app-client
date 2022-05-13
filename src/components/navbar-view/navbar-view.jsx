@@ -6,13 +6,14 @@ import "./navbar-view.scss";
 export function NavbarView(user) {
 
   return (
-    <Navbar id="navbar" fixed="top">
+    <Navbar collapseOnSelect expand="lg" id="navbar" sticky="top">
       <Container id="navbar-container">
-        <Navbar.Brand id="navbar-brand" href="#">Movie-app</Navbar.Brand>
-        <Nav id="nav" className="me-auto">
+        <Navbar.Brand id="navbar-brand" href="logo">Movie-app</Navbar.Brand>
+        <Nav id="nav" className="ms-auto">
           <Nav.Link id="nav-link" href="#home">Home</Nav.Link>
           <Nav.Link id="nav-link" href="#features">Features</Nav.Link>
           <Nav.Link id="nav-link" href="#register">Register</Nav.Link>
+          <Nav.Link id="nav-link" href="#logout">Logout</Nav.Link>
         </Nav>
       </Container>
     </Navbar>
