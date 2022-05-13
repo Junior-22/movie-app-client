@@ -21,7 +21,7 @@ export function RegistrationView(props) {
       <Row>
         <Col>
           <CardGroup>
-            <Card style={{ marginTop: 100, marginBottom: 50, }}>
+            <Card id="registration-view">
               <Card.Body>
                 <Card.Title style={{ textAlign: "center", fontSize: 20 }}>Please register</Card.Title>
                 <Form>
