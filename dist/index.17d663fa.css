@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #b7e5ff;
+  color: #33383a;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #b7e5ff;
+  color: #33383a;
+}
+
+#registration-view {
+  border-color: #000000;
+  border-width: 5px;
+  min-height: 500px;
+  margin-top: 100;
+  margin-bottom: 50;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #b7e5ff;
+  color: #33383a;
+}
+
+#login-view {
+  border-color: #000000;
+  border-width: 2px;
+  min-height: 500px;
+  margin-top: 100;
+  margin-bottom: 50;
+}
+:root {
+  --fontsize-navbar-brand: 30px;
+  --fontsize-navbar-link: 20px;
+  --fontweight-navbar-brand: 600;
+  --fontweight-navbar-link: 200;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#navbar {
+  background-color: #11aaff;
+  margin-bottom: 10px;
+  border: 5px;
+  border-color: #33383a;
+}
+
+#navbar-container {
+  background-color: #11aaff;
+  margin: 0;
+}
+
+#navbar-brand {
+  background-color: #11aaff;
+  color: #33383a;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+#nav {
+  background-color: #11aaff;
+}
+
+#nav-link {
+  background-color: #11aaff;
+  font-size: 20px;
+  font-weight: 200;
+  color: #33383a;
+}
+:root {
+  --fontsize-movie-title: 30px;
+  --fontweight-movie-title: 400;
+  --fontsize-movie-year: 20px;
+  --fontweight-movie-year: 300;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #b7e5ff;
+  color: #33383a;
+}
+
+#movie-card {
+  border-color: #000000;
+  width: 10;
+  border-width: 2px;
+}
+
+#movie-title {
+  margin-top: 20;
+  text-align: center;
+  font-size: var(--fontsize-movie-title);
+  font-weight: var(--fontweight-movie-title);
+}
+
+#movie-description {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+:root {
+  --fontsize-movie-title: 30px;
+  --fontweight-movie-title: 600;
+  --fontsize-movie-year: 20px;
+  --fontweight-movie-year: 300;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #b7e5ff;
+  color: #33383a;
+}
+
+#movie-view {
+  border-color: #000000;
+  border-width: 2px;
+  min-height: 500px;
+}
+
+#movie-title {
+  margin-top: 20;
+  text-align: center;
+  font-size: var(--fontsize-movie-title);
+  font-weight: var(--fontweight-movie-title);
+}
+
+#movie-year {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-description {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-genre {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-director {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-actors {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-view-button {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-right: 20px;
+  border: black;
+}
+.movie-app {
+  color: #b7e5ff;
+  margin-top: 100px;
+}
+/*# sourceMappingURL=index.17d663fa.css.map */
