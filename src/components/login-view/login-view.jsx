@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { Form, Button, Container, Row, Col, Card } from "react-bootstrap";
 import "./login-view.scss";
 
@@ -8,10 +9,24 @@ export function LoginView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(username, password);
-    /* send request to the server for authentication, then call props.onLoggedIn(username) */
-    props.onLoggedIn(username);
+    axios.post("https://movies2022app.herokuapp.com/login", {
+      Username: username,
+      Password: password
+    })
+      .then(response => {
+        const data = response.data;
+        props.onLoggedIn(data);
+      })
+      .catch(e => {
+        console.log("invalid user")
+      });
   };
+
+  /*const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(username, password);
+    props.onLoggedIn(username);
+  }; */
 
   const handleRegister = (e) => {
     e.preventDefault();
