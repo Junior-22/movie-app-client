@@ -1,0 +1,62 @@
+$background-color: #b7e5ff;
+$text-color: #33383a;
+$main-color: #000000;
+
+:root {
+  --fontsize-movie-title: 30px;
+  --fontweight-movie-title: 600;
+  --fontsize-movie-year: 20px;
+  --fontweight-movie-year: 300;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+#movie-view {
+  border-color: $main-color;
+  border-width: 2px;
+  min-height: 500px;
+}
+
+#movie-title {
+  margin-top: 20;
+  text-align: center;
+  font-size: var(--fontsize-movie-title);
+  font-weight: var(--fontweight-movie-title);
+}
+
+#movie-year {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-description {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-genre {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-director {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-actors {
+  font-size: var(--fontsize-movie-year);
+  font-weight: var(--fontweight-movie-year);
+}
+
+#movie-view-button {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-right: 20px;
+  border: black;
+}
