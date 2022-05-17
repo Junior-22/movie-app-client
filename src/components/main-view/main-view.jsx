@@ -23,16 +23,30 @@ export class MainView extends React.Component {
     };
   }
 
-  componentDidMount() {
-    axios.get("https://movies2022app.herokuapp.com/movies")
+  getMovies(token) {
+    axios.get("https://movies2022app.herokuapp.com/movies", {
+      headers: { Authorization: "Bearer " + token }
+    })
       .then(response => {
+        // Assign result to the state
         this.setState({
           movies: response.data
         });
       })
-      .catch(error => {
+      .catch(function (error) {
         console.log(error);
       });
+  }
+
+  // persist log in data in the browser
+  componentDidMount() {
+    let accessToken = localStorage.getItem("token");
+    if (accessToken !== null) {
+      this.setState({
+        user: localStorage.getItem("user")
+      });
+      this.getMovies(accessToken);
+    }
   }
 
   /* When a movie is clicked, this function is invoked and updates the state of the `selectedMovie` *property to that movie*/
@@ -43,15 +57,29 @@ export class MainView extends React.Component {
   }
 
   /* When a user successfully logs in, this function updates the `user` property in state to that *particular user*/
-  onLoggedIn(user) {
+  /* Store data in client's browser, so not required to log in again */
+  onLoggedIn(authData) {
+    console.log(authData);
     this.setState({
-      user
+      user: authData.user.Username
     });
+
+    localStorage.setItem("token", authData.token);
+    localStorage.setItem("user", authData.user.Username);
+    this.getMovies(authData.token);
   }
 
   onRegister(registered) {
     this.setState({
       registered
+    });
+  }
+
+  onLoggedOut() {
+    localStorage.removeItem("token"),
+      localStorage.removeItem("user");
+    this.setState({
+      user: null
     });
   }
 
@@ -86,6 +114,7 @@ export class MainView extends React.Component {
               </Col>
             ))
           }
+          <button onClick={() => { this.onLoggedOut() }}>Logout</button>
         </Row>
       </Container>
     );
