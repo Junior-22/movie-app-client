@@ -116,7 +116,7 @@ export function RegistrationView(props) {
                   </Form.Group>
 
                   <Button variant="primary" type="submit" onClick={handleSubmit}>Submit</Button>
-                  <P></P>
+
                   <p>Already registered <Link to={"/"}>Sign in</Link>here</p>
 
                 </Form>
