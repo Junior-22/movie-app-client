@@ -25429,15 +25429,7 @@ class MainView extends _reactDefault.default.Component {
     render() {
         const { movies , selectedMovie , user , registered  } = this.state;
         // registration for testing
-        if (!registered) return(/*#__PURE__*/ _jsxRuntime.jsx(_registrationView.RegistrationView, {
-            onRegister: (registered1)=>this.onRegister(registered1)
-            ,
-            __source: {
-                fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 90
-            },
-            __self: this
-        }));
+        //if (!registered) return <RegistrationView onRegister={(registered) => this.onRegister(registered)} />;
         /* If there is no user, the LoginView is rendered. If there is a user logged in, the user details are *passed as a prop to the LoginView*/ if (!user) return(/*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
             onLoggedIn: (user1)=>this.onLoggedIn(user1)
             ,
@@ -41682,13 +41674,6 @@ function RegistrationView(props) {
                                             },
                                             __self: this,
                                             children: "Submit"
-                                        }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx(P, {
-                                            __source: {
-                                                fileName: "src/components/registration-view/registration-view.jsx",
-                                                lineNumber: 119
-                                            },
-                                            __self: this
                                         }),
                                         /*#__PURE__*/ _jsxRuntime.jsxs("p", {
                                             __source: {
