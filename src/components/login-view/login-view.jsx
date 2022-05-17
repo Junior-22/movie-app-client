@@ -4,22 +4,53 @@ import { Form, Button, Container, Row, Col, Card } from "react-bootstrap";
 import "./login-view.scss";
 
 export function LoginView(props) {
-  const [username, setUsername] = useState(" ");
-  const [password, setPassword] = useState(" ");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  // Declare hook for each input
+  const [usernameErr, setUsernameErr] = useState("");
+  const [passwordErr, setPasswordErr] = useState("");
+
+  // validate user inputs
+  const validate = () => {
+    let isReq = true;
+    if (!username) {
+      setUsernameErr("Username required");
+      isReq = false;
+    } else if (username.length < 2) {
+      setUsernameErr("Username must be 2 characters long");
+      isReq = false;
+    }
+    if (!password) {
+      setPasswordErr("Password required");
+      isReq = false;
+    } else if (password.length < 6) {
+      setPasswordErr("Password must be 6 characters long");
+      isReq = false;
+    }
+
+    return isReq;
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("https://movies2022app.herokuapp.com/login", {
-      Username: username,
-      Password: password
-    })
-      .then(response => {
-        const data = response.data;
-        props.onLoggedIn(data);
+    const isReq = validate();
+    if (isReq) {
+      /* Send request to the server for authentication */
+      axios.post("https://movies2022app.herokuapp.com/login", null, {
+        params: {
+          Username: username,
+          Password: password
+        }
       })
-      .catch(e => {
-        console.log("invalid user")
-      });
+        .then(response => {
+          const data = response.data;
+          props.onLoggedIn(data);
+        })
+        .catch(e => {
+          console.log("invalid user")
+        });
+    }
   };
 
   /*const handleSubmit = (e) => {
@@ -46,16 +77,22 @@ export function LoginView(props) {
                   <Form.Label>Username</Form.Label>
                   <Form.Control
                     type="text"
+                    placeholder="Enter username"
                     value={username}
                     onChange={e => setUsername(e.target.value)} />
+                  {/* code to display validation error */}
+                  {usernameErr && <p>{usernameErr}</p>}
                 </Form.Group>
 
                 <Form.Group controlId="formPassword">
                   <Form.Label>Password</Form.Label>
                   <Form.Control
-                    type="text"
+                    type="password"
+                    placeholder="password"
                     value={password}
                     onChange={e => setPassword(e.target.value)} />
+                  {/* code to display validation error */}
+                  {passwordErr && <p>{passwordErr}</p>}
                 </Form.Group>
 
                 <Button style={{ marginTop: 10 }} variant="primary" type="submit" onClick={handleSubmit}>Submit</Button>
