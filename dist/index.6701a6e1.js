@@ -44549,6 +44549,7 @@ class MovieCard extends _reactDefault.default.Component {
         const { movieData  } = this.props;
         return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
             className: "movie-card",
+            id: "movie-card",
             __source: {
                 fileName: "src/components/movie-card/movie-card.jsx",
                 lineNumber: 13
@@ -44558,7 +44559,7 @@ class MovieCard extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Img, {
                     variant: "top",
                     src: movieData.ImagePath,
-                    crossorigin: "true",
+                    crossOrigin: "true",
                     __source: {
                         fileName: "src/components/movie-card/movie-card.jsx",
                         lineNumber: 14
@@ -44574,6 +44575,7 @@ class MovieCard extends _reactDefault.default.Component {
                     children: [
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
                             className: "movie-title",
+                            id: "movie-title",
                             __source: {
                                 fileName: "src/components/movie-card/movie-card.jsx",
                                 lineNumber: 16
@@ -44583,6 +44585,7 @@ class MovieCard extends _reactDefault.default.Component {
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Text, {
                             className: "movie-description",
+                            id: "movie-description",
                             __source: {
                                 fileName: "src/components/movie-card/movie-card.jsx",
                                 lineNumber: 17
@@ -44678,6 +44681,7 @@ class MovieView extends _reactDefault.default.Component {
                     children: [
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card, {
                             className: "movie-view",
+                            id: "movie-view",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
                                 lineNumber: 17
@@ -44692,9 +44696,10 @@ class MovieView extends _reactDefault.default.Component {
                                 children: [
                                     /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Img, {
                                         className: "movie-poster",
+                                        id: "movie-poster",
                                         variant: "top",
                                         src: movieData.ImagePath,
-                                        crossorigin: "true",
+                                        crossOrigin: "true",
                                         __source: {
                                             fileName: "src/components/movie-view/movie-view.jsx",
                                             lineNumber: 19
@@ -44703,6 +44708,7 @@ class MovieView extends _reactDefault.default.Component {
                                     }),
                                     /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
                                         className: "movie-title",
+                                        id: "movie-title",
                                         __source: {
                                             fileName: "src/components/movie-view/movie-view.jsx",
                                             lineNumber: 20
@@ -44712,6 +44718,7 @@ class MovieView extends _reactDefault.default.Component {
                                     }),
                                     /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Text, {
                                         className: "movie-year",
+                                        id: "movie-year",
                                         __source: {
                                             fileName: "src/components/movie-view/movie-view.jsx",
                                             lineNumber: 21
@@ -44724,6 +44731,7 @@ class MovieView extends _reactDefault.default.Component {
                                     }),
                                     /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Text, {
                                         className: "movie-description",
+                                        id: "movie-description",
                                         __source: {
                                             fileName: "src/components/movie-view/movie-view.jsx",
                                             lineNumber: 22
@@ -44736,6 +44744,7 @@ class MovieView extends _reactDefault.default.Component {
                                     }),
                                     /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Text, {
                                         className: "movie-genre",
+                                        id: "movie-genre",
                                         __source: {
                                             fileName: "src/components/movie-view/movie-view.jsx",
                                             lineNumber: 23
@@ -44748,6 +44757,7 @@ class MovieView extends _reactDefault.default.Component {
                                     }),
                                     /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Text, {
                                         className: "movie-director",
+                                        id: "movie-director",
                                         __source: {
                                             fileName: "src/components/movie-view/movie-view.jsx",
                                             lineNumber: 24
@@ -44760,6 +44770,7 @@ class MovieView extends _reactDefault.default.Component {
                                     }),
                                     /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Text, {
                                         className: "movie-actors",
+                                        id: "movie-actors",
                                         __source: {
                                             fileName: "src/components/movie-view/movie-view.jsx",
                                             lineNumber: 25
@@ -44774,7 +44785,7 @@ class MovieView extends _reactDefault.default.Component {
                             })
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                            className: "movie-view-button",
+                            id: "movie-view-button",
                             onClick: ()=>{
                                 onBackClick(null);
                             },
