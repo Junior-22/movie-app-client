@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Card, Col, Container, Row, Button } from "react-bootstrap";
+import { Link } from "react-router-dom"
 
 import "./movie-view.scss";
 
@@ -35,6 +36,7 @@ export class MovieView extends React.Component {
 MovieView.propTypes = {
   movieData: PropTypes.shape({
     Title: PropTypes.string.isRequired,
+    ImagePath: PropTypes.string.isRequired,
     Year: PropTypes.string.isRequired,
     Description: PropTypes.string.isRequired,
     Genre: PropTypes.shape({
