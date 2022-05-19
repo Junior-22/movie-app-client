@@ -16,20 +16,21 @@ $main-color: #000000;
   color: $text-color;
 }
 
-.movie-card {
+#movie-card {
   border-color: $main-color;
-  width: 10;
   border-width: 2px;
+  height: 900px;
+  margin-top: 30px;
 }
 
-.movie-title {
+#movie-title {
   margin-top: 20;
   text-align: center;
   font-size: var(--fontsize-movie-title);
   font-weight: var(--fontweight-movie-title);
 }
 
-.movie-description {
+#movie-description {
   font-size: var(--fontsize-movie-year);
   font-weight: var(--fontweight-movie-year);
 }
