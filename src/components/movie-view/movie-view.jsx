@@ -14,18 +14,18 @@ export class MovieView extends React.Component {
       <Container>
         <Row>
           <Col>
-            <Card className="movie-view">
+            <Card className="movie-view" id="movie-view">
               <Card.Body>
-                <Card.Img className="movie-poster" variant="top" src={movieData.ImagePath} crossorigin="true" />
-                <Card.Title className="movie-title">{movieData.Title}</Card.Title>
-                <Card.Text className="movie-year"> Year: {movieData.Year}</Card.Text>
-                <Card.Text className="movie-description"> Description: {movieData.Description}</Card.Text>
-                <Card.Text className="movie-genre"> Genre: {movieData.Genre.Name}</Card.Text>
-                <Card.Text className="movie-director"> Director: {movieData.Director.Name}</Card.Text>
-                <Card.Text className="movie-actors"> Actors: {movieData.Actors}</Card.Text>
+                <Card.Img className="movie-poster" id="movie-poster" variant="top" src={movieData.ImagePath} crossOrigin="true" />
+                <Card.Title className="movie-title" id="movie-title">{movieData.Title}</Card.Title>
+                <Card.Text className="movie-year" id="movie-year"> Year: {movieData.Year}</Card.Text>
+                <Card.Text className="movie-description" id="movie-description"> Description: {movieData.Description}</Card.Text>
+                <Card.Text className="movie-genre" id="movie-genre"> Genre: {movieData.Genre.Name}</Card.Text>
+                <Card.Text className="movie-director" id="movie-director"> Director: {movieData.Director.Name}</Card.Text>
+                <Card.Text className="movie-actors" id="movie-actors"> Actors: {movieData.Actors}</Card.Text>
               </Card.Body>
             </Card>
-            <Button className="movie-view-button" onClick={() => { onBackClick(null); }}>Back</Button>
+            <Button id="movie-view-button" onClick={() => { onBackClick(null); }}>Back</Button>
           </Col>
         </Row>
       </Container>
