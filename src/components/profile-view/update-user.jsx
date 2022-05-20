@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Form } from "react-bootstrap";
+import { Row, Col, Button, Card, Form } from "react-bootstrap";
 
 
 export function UpdatedUser(props) {
