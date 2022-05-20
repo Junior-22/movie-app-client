@@ -18,6 +18,13 @@
   margin-top: 100;
   margin-bottom: 50;
 }
+
+#button {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-right: 20px;
+  border: #000000 !important;
+}
 * {
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
