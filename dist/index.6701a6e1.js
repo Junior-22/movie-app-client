@@ -45217,7 +45217,7 @@ var _favouriteMovies = require("./favourite-movies");
 var _s = $RefreshSig$();
 function ProfileView(props) {
     _s();
-    const [userdata, setUserdata] = _react.useState({
+    const [userData, setUserData] = _react.useState({
     });
     const [updatedUser, setUpdatedUser] = _react.useState({
     });
@@ -45229,7 +45229,7 @@ function ProfileView(props) {
         _axiosDefault.default.get(`https://movies2022app.herokuapp.com/users/${user}`, {
             cancelToken: cancelToken
         }).then((response)=>{
-            setUserdata(response.data);
+            setUserData(response.data);
             setUpdatedUser(response.data);
             setFavouriteMoviesList(props.movies.filter((m)=>response.data.FavouriteMovies.includes(m._id)
             ));
@@ -45248,7 +45248,7 @@ function ProfileView(props) {
     const handleSubmit = (e)=>{
         e.preventDefault();
         _axiosDefault.default.put(`https://movies2022app.herokuapp.com/users/${userdata.User}`, updatedUser).then((response)=>{
-            setUserdata(response.data);
+            setUserData(response.data);
             alert("profile updated");
         }).catch((error)=>{
             console.log("error");
@@ -45316,7 +45316,7 @@ function ProfileView(props) {
                         __self: this
                     }),
                     /*#__PURE__*/ _jsxRuntime.jsx(_updateUser.UpdatedUser, {
-                        userData: userdata,
+                        userData: userData,
                         handleSubmit: handleSubmit,
                         handleUpdate: handleUpdate,
                         __source: {
@@ -45364,7 +45364,7 @@ function ProfileView(props) {
         })
     }));
 }
-_s(ProfileView, "9J5O8+0S9rCodeMb6D1qPxMhoAo=");
+_s(ProfileView, "cwsGDYXSk/iCQfoqO6w37Hdro1E=");
 _c = ProfileView;
 var _c;
 $RefreshReg$(_c, "ProfileView");
@@ -45390,7 +45390,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactBootstrap = require("react-bootstrap");
 function UserData(props) {
-    const userdata = props.userdata;
+    const userData = props.userData;
     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
         __source: {
             fileName: "src/components/profile-view/user-data.jsx",
@@ -45433,7 +45433,7 @@ function UserData(props) {
                                 __self: this,
                                 children: [
                                     "Username: ",
-                                    userdata.Username
+                                    userData.Username
                                 ]
                             }),
                             /*#__PURE__*/ _jsxRuntime.jsxs("p", {
@@ -45444,7 +45444,7 @@ function UserData(props) {
                                 __self: this,
                                 children: [
                                     "Email: ",
-                                    userdata.Email
+                                    userData.Email
                                 ]
                             }),
                             /*#__PURE__*/ _jsxRuntime.jsxs("p", {
@@ -45455,7 +45455,7 @@ function UserData(props) {
                                 __self: this,
                                 children: [
                                     "Birthday: ",
-                                    userdata.Birthday
+                                    userData.Birthday
                                 ]
                             })
                         ]
