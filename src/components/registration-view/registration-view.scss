@@ -16,3 +16,10 @@ $main-color: #000000;
   margin-top: 100;
   margin-bottom: 50;
 }
+
+#button {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-right: 20px;
+  border: $main-color;
+}
