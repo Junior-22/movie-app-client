@@ -7,7 +7,7 @@ import { FavouriteMovies } from "./favourite-movies";
 
 export function ProfileView(props) {
 
-  const [userdata, setUserdata] = useState({});
+  const [userData, setUserData] = useState({});
   const [updatedUser, setUpdatedUser] = useState({});
   const [favouriteMoviesList, setFavouriteMoviesList] = useState({});
 
@@ -19,7 +19,7 @@ export function ProfileView(props) {
       cancelToken: cancelToken
     })
       .then(response => {
-        setUserdata(response.data);
+        setUserData(response.data);
         setUpdatedUser(response.data);
         setFavouriteMoviesList(props.movies.filter(m => response.data.FavouriteMovies.includes(m._id)));
       })
@@ -46,7 +46,7 @@ export function ProfileView(props) {
     e.preventDefault();
     axios.put(`https://movies2022app.herokuapp.com/users/${userdata.User}`, updatedUser)
       .then(response => {
-        setUserdata(response.data);
+        setUserData(response.data);
         alert("profile updated");
       })
       .catch(error => {
@@ -95,7 +95,7 @@ export function ProfileView(props) {
 
           <FavouriteMovies favouriteMoviesList={favouriteMoviesList} removeFav={removeFav} />
 
-          <UpdatedUser userData={userdata} handleSubmit={handleSubmit} handleUpdate={handleUpdate} />
+          <UpdatedUser userData={userData} handleSubmit={handleSubmit} handleUpdate={handleUpdate} />
 
           <div>
             <Nav.Link href="/">back to movies</Nav.Link>
