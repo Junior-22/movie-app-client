@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Nav } from "react-bootstrap";
 import { UserData } from "./user-data";
 import { UpdatedUser } from "./update-user";
 import { FavouriteMovies } from "./favourite-movies";
