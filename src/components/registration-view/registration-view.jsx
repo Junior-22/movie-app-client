@@ -61,9 +61,8 @@ export function RegistrationView(props) {
           alert("Registration successful, please login");
           window.open("/", "_self"); // "_self" is necessary for the page to open in same tab
         })
-        .catch(response => {
-          console.error(response);
-          alert("something not rightly entered");
+        .catch(e => {
+          console.log("error registering the user");
         });
     }
   };
@@ -97,7 +96,7 @@ export function RegistrationView(props) {
                     {passwordErr && <p>{passwordErr}</p>}
                   </Form.Group>
 
-                  <Form.Group controlId="Email">
+                  <Form.Group controlId="formEmail">
                     <Form.Label>Email</Form.Label>
                     <Form.Control
                       type="email"
@@ -107,7 +106,7 @@ export function RegistrationView(props) {
                     {emailErr && <p>{emailErr}</p>}
                   </Form.Group>
 
-                  <Form.Group controlId="updateBirthday">
+                  <Form.Group controlId="formBirthday">
                     <Form.Label>Birthday</Form.Label>
                     <Form.Control
                       type="date"
@@ -115,9 +114,9 @@ export function RegistrationView(props) {
                       onChange={e => setBirthday(e.target.value)} />
                   </Form.Group>
 
-                  <Button variant="primary" type="submit" onClick={handleSubmit}>Submit</Button>
+                  <Button id="button" variant="primary" type="submit" onClick={handleSubmit}>Submit</Button>
 
-                  <p>Already registered <Link to={"/"}>Sign in</Link>here</p>
+                  <p>Already registered <Link to={"/"}>Sign in</Link> here</p>
 
                 </Form>
               </Card.Body>
