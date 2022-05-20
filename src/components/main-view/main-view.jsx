@@ -112,16 +112,16 @@ export class MainView extends React.Component {
               <MovieView movieData={movies.find(m => m._id === match.params.movieId)} onBackClick={() => history.goBack()} />
             </Col>
           }} />
-          <Route exact path="/movies/genre/:genreName" render={({ match }) => {
+          <Route exact path="/genre/:genreName" render={({ match, history }) => {
             if (movies.length === 0) return <div className="main-view" />;
             return <Col md={8}>
-              <GenreView genre={movies.find(m => m.Genre.Name === match.params.name).Genre} />
+              <GenreView genre={movies.find(m => m.Genre.Name === match.params.name).Genre} onBackClick={() => history.goBack()} />
             </Col>
           }} />
-          <Route exact path="/movies/director/:directorName" render={({ match }) => {
+          <Route exact path="/director/:name" render={({ match, history }) => {
             if (movies.length === O) return <div className="main-view" />;
             return <Col md={8}>
-              <DirectorView director={movies.find(m => m.Director.Name === match.params.name).Director} />
+              <DirectorView director={movies.find(m => m.Director.Name === match.params.name).Director} onBackClick={() => history.goBack()} />
             </Col>
           }} />
         </Row>
