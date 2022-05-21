@@ -45225,7 +45225,7 @@ function ProfileView(props) {
     });
     let token = localStorage.getItem("token");
     _axiosDefault.default.defaults.headers.common["Authorization"] = "Bearer " + token;
-    const getUserData = (cancelToken, username)=>{
+    const getUserData = (cancelToken, Username)=>{
         _axiosDefault.default.get(`https://movies2022app.herokuapp.com/users/${user}`, {
             cancelToken: cancelToken
         }).then((response)=>{
@@ -45390,7 +45390,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactBootstrap = require("react-bootstrap");
 function UserData(props) {
-    const userData = props.userData;
+    const { userData  } = props;
     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
         __source: {
             fileName: "src/components/profile-view/user-data.jsx",
@@ -45695,7 +45695,7 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                     lineNumber: 15
                 },
                 __self: this,
-                children: favouriteMoviesList.map((movie)=>{
+                children: favouriteMoviesList.map((movieData)=>{
                     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                         __source: {
                             fileName: "src/components/profile-view/favourite-movies.jsx",
@@ -45744,7 +45744,7 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                         }),
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
                                             variant: "primary",
-                                            onClick: ()=>removeFav(movie._id)
+                                            onClick: ()=>removeFav(movieData._id)
                                             ,
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
@@ -45774,7 +45774,7 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                 })
                             ]
                         })
-                    }));
+                    }, movieData._id));
                 })
             })
         ]
