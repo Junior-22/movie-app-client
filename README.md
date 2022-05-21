@@ -10,8 +10,8 @@ The client-side of my movie app. The app will display a list of all movies avail
 <b>Usage</b>
 
 After cloning the repository, apply the following steps
-- To install Parcel v2 or recent, run npm install -g parcel@next 
-- To start the local server, run npm parcel src/index.html
+- To install Parcel v2 or recent, run "npm install -g parcel@next" 
+- To start the local server, run "npm run start"
 - Open the local server on the browser 
 
 <b>Contributions</b>
