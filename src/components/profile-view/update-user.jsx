@@ -46,5 +46,5 @@ export function UpdatedUser(props) {
         </Card>
       </Col>
     </Row>
-  )
+  );
 }
