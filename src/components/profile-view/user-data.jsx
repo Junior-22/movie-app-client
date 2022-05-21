@@ -3,7 +3,7 @@ import { Card, Row, Col } from "react-bootstrap";
 
 
 export function UserData(props) {
-  const userData = props.userData
+  const { userData } = props;
 
   return (
     <Row>
@@ -18,5 +18,5 @@ export function UserData(props) {
         </Card>
       </Col>
     </Row>
-  )
+  );
 }
