@@ -3,8 +3,8 @@ import { Row, Col, Button, Card, Form } from "react-bootstrap";
 
 
 export function UpdatedUser(props) {
-  const user = props.userdata
-  const { handleSubmit, handleUpdate } = props;
+
+  const { handleSubmit, handleUpdate, userData } = props;
 
   return (
     <Row>
@@ -18,7 +18,7 @@ export function UpdatedUser(props) {
               <Form.Control
                 type="text"
                 name="Username"
-                defaultValue={user.Username}
+                defaultValue={userData.Username}
                 onChange={e => handleUpdate(e)} />
             </Form.Group>
 
@@ -36,7 +36,7 @@ export function UpdatedUser(props) {
               <Form.Control
                 type="text"
                 name="Email"
-                defaultValue={user.Email}
+                defaultValue={userData.Email}
                 onChange={e => handleUpdate(e)} />
             </Form.Group>
 
