@@ -13,16 +13,16 @@ export function FavouriteMovies({ favouriteMoviesList, removeFav }) {
       </Row>
 
       <Row>
-        {favouriteMoviesList.map(movie => {
+        {favouriteMoviesList.map((movieData) => {
           return (
-            <Col>
+            <Col key={movieData._id}>
               <Card>
                 <Card.Image variant="top" src={movieData.ImagePath} crossOrigin="true" />
                 <Card.Body>
                   <Card.Title>{movieData.Title}</Card.Title>
                   <Card.Subtitle>{movieData.Year}</Card.Subtitle>
 
-                  <Button variant="primary" onClick={() => removeFav(movie._id)}>Remove from favourites</Button>
+                  <Button variant="primary" onClick={() => removeFav(movieData._id)}>Remove from favourites</Button>
                   <Link to={`/movies/${movieData._id}`}>
                     <Button variant="link">Details</Button>
                   </Link>
