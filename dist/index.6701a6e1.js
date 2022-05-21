@@ -45490,8 +45490,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactBootstrap = require("react-bootstrap");
 function UpdatedUser(props) {
-    const user = props.userdata;
-    const { handleSubmit , handleUpdate  } = props;
+    const { handleSubmit , handleUpdate , userData  } = props;
     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
         __source: {
             fileName: "src/components/profile-view/update-user.jsx",
@@ -45545,7 +45544,7 @@ function UpdatedUser(props) {
                                     /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
                                         type: "text",
                                         name: "Username",
-                                        defaultValue: user.Username,
+                                        defaultValue: userData.Username,
                                         onChange: (e)=>handleUpdate(e)
                                         ,
                                         __source: {
@@ -45605,7 +45604,7 @@ function UpdatedUser(props) {
                                     /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
                                         type: "text",
                                         name: "Email",
-                                        defaultValue: user.Email,
+                                        defaultValue: userData.Email,
                                         onChange: (e)=>handleUpdate(e)
                                         ,
                                         __source: {
