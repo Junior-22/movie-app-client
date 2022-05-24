@@ -8,7 +8,7 @@ import "./director-view.scss";
 export class DirectorView extends React.Component {
 
   render() {
-    const { movieData, onBackClick } = this.props;
+    const { director, onBackClick } = this.props;
 
     return (
       <Container>
@@ -16,13 +16,13 @@ export class DirectorView extends React.Component {
           <Col>
             <Card className="director-view" id="director-view">
               <Card.Body>
-                <Card.Img className="movie-poster" id="movie-poster" variant="top" src={movieData.ImagePath} crossOrigin="true" />
-                <Card.Title id="movie-title">{movieData.Title}</Card.Title>
-                <Card.Text className="movie-director" id="movie-director"> Director: {movieData.Director.Name}</Card.Text>
+                <Card.Img className="movie-poster" id="movie-poster" variant="top" src={director.ImagePath} crossOrigin="true" />
+                <Card.Title id="movie-title">{director.Title}</Card.Title>
+                <Card.Text className="movie-director" id="movie-director"> Director: {director.Director.Name}</Card.Text>
               </Card.Body>
             </Card>
 
-            <Button id="" onClick={() => { onBackClick(null); }}>Back</Button>
+            <Button id="director-view-button" onClick={() => { onBackClick(null); }}>Back</Button>
 
           </Col>
         </Row>
