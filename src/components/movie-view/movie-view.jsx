@@ -20,17 +20,17 @@ export class MovieView extends React.Component {
                 <Card.Title className="movie-title" id="movie-title">{movieData.Title}</Card.Title>
                 <Card.Text className="movie-year" id="movie-year"> Year: {movieData.Year}</Card.Text>
                 <Card.Text className="movie-description" id="movie-description"> Description: {movieData.Description}</Card.Text>
+                <Card.Text className="movie-actors" id="movie-actors"> Actors: {movieData.Actors}</Card.Text>
                 <Card.Text id="movie-genre">
                   <Link to={`/genre/${movieData.Genre.Name}`}>
                     <Button variant="link">Genre</Button>
                   </Link>
                 </Card.Text>
-                <Card.Text className="movie-director" id="movie-director"> Director: {movieData.Director.Name}
+                <Card.Text className="movie-director" id="movie-director">
                   <Link to={`/director/${movieData.Director.Name}`}>
                     <Button variant="link">Director</Button>
                   </Link>
                 </Card.Text>
-                <Card.Text className="movie-actors" id="movie-actors"> Actors: {movieData.Actors}</Card.Text>
               </Card.Body>
             </Card>
             <Button id="movie-view-button" onClick={() => { onBackClick(null); }}>Back</Button>
