@@ -25535,8 +25535,8 @@ class MainView extends _reactDefault.default.Component {
                                 return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                                     md: 8,
                                     children: /*#__PURE__*/ _jsxRuntime.jsx(_genreView.GenreView, {
-                                        genre: movies.find((m)=>m.Genre.Name === match.params.name
-                                        ).Genre,
+                                        genre: movies.find((m)=>m.Genre.Name === match.params.genreName
+                                        ),
                                         onBackClick: ()=>history.goBack()
                                     })
                                 }));
@@ -25565,7 +25565,7 @@ class MainView extends _reactDefault.default.Component {
                                     md: 8,
                                     children: /*#__PURE__*/ _jsxRuntime.jsx(_directorView.DirectorView, {
                                         director: movies.find((m)=>m.Director.Name === match.params.name
-                                        ).Director,
+                                        ),
                                         onBackClick: ()=>history.goBack()
                                     })
                                 }));
@@ -44681,14 +44681,14 @@ class MovieCard extends _reactDefault.default.Component {
                             children: movieData.Title
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Text, {
-                            className: "movie-description",
-                            id: "movie-description",
+                            className: "year",
+                            id: "year",
                             __source: {
                                 fileName: "src/components/movie-card/movie-card.jsx",
                                 lineNumber: 17
                             },
                             __self: this,
-                            children: movieData.Description
+                            children: movieData.Year
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
                             to: `/movies/${movieData._id}`,
@@ -44704,7 +44704,7 @@ class MovieCard extends _reactDefault.default.Component {
                                     lineNumber: 19
                                 },
                                 __self: this,
-                                children: "Open"
+                                children: "see more"
                             })
                         })
                     ]
@@ -44839,73 +44839,69 @@ class MovieView extends _reactDefault.default.Component {
                                             movieData.Description
                                         ]
                                     }),
-                                    /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Text, {
-                                        id: "movie-genre",
-                                        __source: {
-                                            fileName: "src/components/movie-view/movie-view.jsx",
-                                            lineNumber: 23
-                                        },
-                                        __self: this,
-                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                            to: `/genre/${movieData.Genre.Name}`,
-                                            __source: {
-                                                fileName: "src/components/movie-view/movie-view.jsx",
-                                                lineNumber: 24
-                                            },
-                                            __self: this,
-                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                                                variant: "link",
-                                                __source: {
-                                                    fileName: "src/components/movie-view/movie-view.jsx",
-                                                    lineNumber: 25
-                                                },
-                                                __self: this,
-                                                children: "Genre"
-                                            })
-                                        })
-                                    }),
-                                    /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Text, {
-                                        className: "movie-director",
-                                        id: "movie-director",
-                                        __source: {
-                                            fileName: "src/components/movie-view/movie-view.jsx",
-                                            lineNumber: 28
-                                        },
-                                        __self: this,
-                                        children: [
-                                            " Director: ",
-                                            movieData.Director.Name,
-                                            /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                                to: `/director/${movieData.Director.Name}`,
-                                                __source: {
-                                                    fileName: "src/components/movie-view/movie-view.jsx",
-                                                    lineNumber: 29
-                                                },
-                                                __self: this,
-                                                children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                                                    variant: "link",
-                                                    __source: {
-                                                        fileName: "src/components/movie-view/movie-view.jsx",
-                                                        lineNumber: 30
-                                                    },
-                                                    __self: this,
-                                                    children: "Director"
-                                                })
-                                            })
-                                        ]
-                                    }),
                                     /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Text, {
                                         className: "movie-actors",
                                         id: "movie-actors",
                                         __source: {
                                             fileName: "src/components/movie-view/movie-view.jsx",
-                                            lineNumber: 33
+                                            lineNumber: 23
                                         },
                                         __self: this,
                                         children: [
                                             " Actors: ",
                                             movieData.Actors
                                         ]
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Text, {
+                                        id: "movie-genre",
+                                        __source: {
+                                            fileName: "src/components/movie-view/movie-view.jsx",
+                                            lineNumber: 24
+                                        },
+                                        __self: this,
+                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                                            to: `/genre/${movieData.Genre.Name}`,
+                                            __source: {
+                                                fileName: "src/components/movie-view/movie-view.jsx",
+                                                lineNumber: 25
+                                            },
+                                            __self: this,
+                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                                variant: "link",
+                                                __source: {
+                                                    fileName: "src/components/movie-view/movie-view.jsx",
+                                                    lineNumber: 26
+                                                },
+                                                __self: this,
+                                                children: "Genre"
+                                            })
+                                        })
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Text, {
+                                        className: "movie-director",
+                                        id: "movie-director",
+                                        __source: {
+                                            fileName: "src/components/movie-view/movie-view.jsx",
+                                            lineNumber: 29
+                                        },
+                                        __self: this,
+                                        children: /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                                            to: `/director/${movieData.Director.Name}`,
+                                            __source: {
+                                                fileName: "src/components/movie-view/movie-view.jsx",
+                                                lineNumber: 30
+                                            },
+                                            __self: this,
+                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                                variant: "link",
+                                                __source: {
+                                                    fileName: "src/components/movie-view/movie-view.jsx",
+                                                    lineNumber: 31
+                                                },
+                                                __self: this,
+                                                children: "Director"
+                                            })
+                                        })
                                     })
                                 ]
                             })
@@ -44970,7 +44966,7 @@ var _reactRouterDom = require("react-router-dom");
 var _directorViewScss = require("./director-view.scss");
 class DirectorView extends _reactDefault.default.Component {
     render() {
-        const { movieData , onBackClick  } = this.props;
+        const { director , onBackClick  } = this.props;
         return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
             __source: {
                 fileName: "src/components/director-view/director-view.jsx",
@@ -45009,7 +45005,7 @@ class DirectorView extends _reactDefault.default.Component {
                                         className: "movie-poster",
                                         id: "movie-poster",
                                         variant: "top",
-                                        src: movieData.ImagePath,
+                                        src: director.ImagePath,
                                         crossOrigin: "true",
                                         __source: {
                                             fileName: "src/components/director-view/director-view.jsx",
@@ -45024,7 +45020,7 @@ class DirectorView extends _reactDefault.default.Component {
                                             lineNumber: 20
                                         },
                                         __self: this,
-                                        children: movieData.Title
+                                        children: director.Title
                                     }),
                                     /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Text, {
                                         className: "movie-director",
@@ -45036,14 +45032,14 @@ class DirectorView extends _reactDefault.default.Component {
                                         __self: this,
                                         children: [
                                             " Director: ",
-                                            movieData.Director.Name
+                                            director.Director.Name
                                         ]
                                     })
                                 ]
                             })
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                            id: "",
+                            id: "director-view-button",
                             onClick: ()=>{
                                 onBackClick(null);
                             },
@@ -45092,7 +45088,7 @@ var _reactBootstrap = require("react-bootstrap");
 var _genreViewScss = require("./genre-view.scss");
 class GenreView extends _reactDefault.default.Component {
     render() {
-        const { movieData , onBackClick  } = this.props;
+        const { genre , onBackClick  } = this.props;
         return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
             __source: {
                 fileName: "src/components/genre-view/genre-view.jsx",
@@ -45131,7 +45127,7 @@ class GenreView extends _reactDefault.default.Component {
                                         className: "movie-poster",
                                         id: "movie-poster",
                                         variant: "top",
-                                        src: movieData.ImagePath,
+                                        src: genre.ImagePath,
                                         crossOrigin: "true",
                                         __source: {
                                             fileName: "src/components/genre-view/genre-view.jsx",
@@ -45146,7 +45142,7 @@ class GenreView extends _reactDefault.default.Component {
                                             lineNumber: 19
                                         },
                                         __self: this,
-                                        children: movieData.Title
+                                        children: genre.Title
                                     }),
                                     /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Text, {
                                         className: "movie-genre",
@@ -45158,14 +45154,14 @@ class GenreView extends _reactDefault.default.Component {
                                         __self: this,
                                         children: [
                                             " Genre: ",
-                                            movieData.Genre.Name
+                                            genre.Genre.Name
                                         ]
                                     })
                                 ]
                             })
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                            id: "",
+                            id: "genre-view-button",
                             onClick: ()=>{
                                 onBackClick(null);
                             },
@@ -45659,29 +45655,30 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactBootstrap = require("react-bootstrap");
 var _reactRouterDom = require("react-router-dom");
 function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
+    console.log(favouriteMoviesList);
     return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Container, {
         __source: {
             fileName: "src/components/profile-view/favourite-movies.jsx",
-            lineNumber: 8
+            lineNumber: 9
         },
         __self: this,
         children: [
             /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
                 __source: {
                     fileName: "src/components/profile-view/favourite-movies.jsx",
-                    lineNumber: 9
+                    lineNumber: 10
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                     __source: {
                         fileName: "src/components/profile-view/favourite-movies.jsx",
-                        lineNumber: 10
+                        lineNumber: 11
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx("h5", {
                         __source: {
                             fileName: "src/components/profile-view/favourite-movies.jsx",
-                            lineNumber: 11
+                            lineNumber: 12
                         },
                         __self: this,
                         children: "Favourite Movies"
@@ -45691,20 +45688,20 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
             /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
                 __source: {
                     fileName: "src/components/profile-view/favourite-movies.jsx",
-                    lineNumber: 15
+                    lineNumber: 16
                 },
                 __self: this,
                 children: favouriteMoviesList.map((movieData)=>{
                     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                         __source: {
                             fileName: "src/components/profile-view/favourite-movies.jsx",
-                            lineNumber: 18
+                            lineNumber: 19
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
                             __source: {
                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                lineNumber: 19
+                                lineNumber: 20
                             },
                             __self: this,
                             children: [
@@ -45714,21 +45711,21 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                     crossOrigin: "true",
                                     __source: {
                                         fileName: "src/components/profile-view/favourite-movies.jsx",
-                                        lineNumber: 20
+                                        lineNumber: 21
                                     },
                                     __self: this
                                 }),
                                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
                                     __source: {
                                         fileName: "src/components/profile-view/favourite-movies.jsx",
-                                        lineNumber: 21
+                                        lineNumber: 22
                                     },
                                     __self: this,
                                     children: [
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                lineNumber: 22
+                                                lineNumber: 23
                                             },
                                             __self: this,
                                             children: movieData.Title
@@ -45736,7 +45733,7 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                lineNumber: 23
+                                                lineNumber: 24
                                             },
                                             __self: this,
                                             children: movieData.Year
@@ -45747,7 +45744,7 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                             ,
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                lineNumber: 25
+                                                lineNumber: 26
                                             },
                                             __self: this,
                                             children: "Remove from favourites"
@@ -45756,14 +45753,14 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                             to: `/movies/${movieData._id}`,
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                lineNumber: 26
+                                                lineNumber: 27
                                             },
                                             __self: this,
                                             children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
                                                 variant: "link",
                                                 __source: {
                                                     fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                    lineNumber: 27
+                                                    lineNumber: 28
                                                 },
                                                 __self: this,
                                                 children: "Details"
