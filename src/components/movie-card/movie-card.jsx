@@ -14,9 +14,9 @@ export class MovieCard extends React.Component {
         <Card.Img variant="top" src={movieData.ImagePath} crossOrigin="true" />
         <Card.Body>
           <Card.Title className="movie-title" id="movie-title">{movieData.Title}</Card.Title>
-          <Card.Text className="movie-description" id="movie-description">{movieData.Description}</Card.Text>
+          <Card.Text className="year" id="year">{movieData.Year}</Card.Text>
           <Link to={`/movies/${movieData._id}`}>
-            <Button variant="link">Open</Button>
+            <Button variant="link">see more</Button>
           </Link>
         </Card.Body>
       </Card>
