@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 
 export function FavouriteMovies({ favouriteMoviesList, removeFav }) {
+  console.log(favouriteMoviesList);
   return (
     <Container>
       <Row>
