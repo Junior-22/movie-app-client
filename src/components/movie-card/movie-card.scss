@@ -19,7 +19,7 @@ $main-color: #000000;
 #movie-card {
   border-color: $main-color;
   border-width: 2px;
-  height: 900px;
+  height: 600px;
   margin-top: 30px;
 }
 
@@ -30,7 +30,8 @@ $main-color: #000000;
   font-weight: var(--fontweight-movie-title);
 }
 
-#movie-description {
+#year {
   font-size: var(--fontsize-movie-year);
   font-weight: var(--fontweight-movie-year);
+  text-align: center;
 }
