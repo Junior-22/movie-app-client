@@ -22,11 +22,11 @@ export function FavouriteMovies({ favouriteMoviesList, removeFav }) {
                 <Card.Body>
                   <Card.Title>{movieData.Title}</Card.Title>
                   <Card.Subtitle>{movieData.Year}</Card.Subtitle>
-
-                  <Button variant="primary" onClick={() => removeFav(movieData._id)}>Remove from favourites</Button>
                   <Link to={`/movies/${movieData._id}`}>
                     <Button variant="link">Details</Button>
                   </Link>
+
+                  <Button variant="primary" onClick={() => removeFav(movieData._id)}>Remove from favourites</Button>
                 </Card.Body>
               </Card>
             </Col>
