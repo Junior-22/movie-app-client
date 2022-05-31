@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Button, Card, Form } from "react-bootstrap";
-
+import "./update-user.scss"
 
 export function UpdatedUser(props) {
 
@@ -9,8 +9,8 @@ export function UpdatedUser(props) {
   return (
     <Row>
       <Col>
-        <Card>
-          <Card.Title>Update Profile</Card.Title>
+        <Card id="update-user">
+          <Card.Title id="title">Update Profile</Card.Title>
           <Form>
 
             <Form.Group controlId="formUsername">
@@ -18,7 +18,7 @@ export function UpdatedUser(props) {
               <Form.Control
                 type="text"
                 name="Username"
-                defaultValue={userData.Username}
+                //defaultValue={userData.Username}
                 onChange={e => handleUpdate(e)} />
             </Form.Group>
 
@@ -36,11 +36,11 @@ export function UpdatedUser(props) {
               <Form.Control
                 type="text"
                 name="Email"
-                defaultValue={userData.Email}
+                //defaultValue={userData.Email}
                 onChange={e => handleUpdate(e)} />
             </Form.Group>
 
-            <Button variant="primary" type="submit" onClick={handleSubmit}>Update</Button>
+            <Button id="update-user-button" variant="primary" type="submit" onClick={handleSubmit}>Update</Button>
 
           </Form>
         </Card>
