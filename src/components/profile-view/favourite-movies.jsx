@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./favourite-movies.scss"
 
 
 export function FavouriteMovies({ favouriteMoviesList, removeFav }) {
@@ -17,7 +18,7 @@ export function FavouriteMovies({ favouriteMoviesList, removeFav }) {
         {favouriteMoviesList.map((movieData) => {
           return (
             <Col key={movieData._id}>
-              <Card>
+              <Card id="favourite-movies">
                 <Card.Image variant="top" src={movieData.ImagePath} crossOrigin="true" />
                 <Card.Body>
                   <Card.Title>{movieData.Title}</Card.Title>
