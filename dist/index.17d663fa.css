@@ -310,12 +310,6 @@
   font-weight: var(--fontweight-movie-title);
 }
 
-#body {
-  font-size: var(--fontsize-movie-year);
-  font-weight: var(--fontweight-movie-year);
-  text-align: left;
-}
-
 #update-user-button {
   margin-top: 10px;
   margin-bottom: 100px;
