@@ -45661,31 +45661,32 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactBootstrap = require("react-bootstrap");
 var _reactRouterDom = require("react-router-dom");
+var _favouriteMoviesScss = require("./favourite-movies.scss");
 function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
     console.log(favouriteMoviesList);
     return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Container, {
         __source: {
             fileName: "src/components/profile-view/favourite-movies.jsx",
-            lineNumber: 9
+            lineNumber: 10
         },
         __self: this,
         children: [
             /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
                 __source: {
                     fileName: "src/components/profile-view/favourite-movies.jsx",
-                    lineNumber: 10
+                    lineNumber: 11
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                     __source: {
                         fileName: "src/components/profile-view/favourite-movies.jsx",
-                        lineNumber: 11
+                        lineNumber: 12
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx("h5", {
                         __source: {
                             fileName: "src/components/profile-view/favourite-movies.jsx",
-                            lineNumber: 12
+                            lineNumber: 13
                         },
                         __self: this,
                         children: "Favourite Movies"
@@ -45695,20 +45696,21 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
             /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
                 __source: {
                     fileName: "src/components/profile-view/favourite-movies.jsx",
-                    lineNumber: 16
+                    lineNumber: 17
                 },
                 __self: this,
                 children: favouriteMoviesList.map((movieData)=>{
                     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                         __source: {
                             fileName: "src/components/profile-view/favourite-movies.jsx",
-                            lineNumber: 19
+                            lineNumber: 20
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
+                            id: "favourite-movies",
                             __source: {
                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                lineNumber: 20
+                                lineNumber: 21
                             },
                             __self: this,
                             children: [
@@ -45718,21 +45720,21 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                     crossOrigin: "true",
                                     __source: {
                                         fileName: "src/components/profile-view/favourite-movies.jsx",
-                                        lineNumber: 21
+                                        lineNumber: 22
                                     },
                                     __self: this
                                 }),
                                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
                                     __source: {
                                         fileName: "src/components/profile-view/favourite-movies.jsx",
-                                        lineNumber: 22
+                                        lineNumber: 23
                                     },
                                     __self: this,
                                     children: [
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                lineNumber: 23
+                                                lineNumber: 24
                                             },
                                             __self: this,
                                             children: movieData.Title
@@ -45740,7 +45742,7 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                lineNumber: 24
+                                                lineNumber: 25
                                             },
                                             __self: this,
                                             children: movieData.Year
@@ -45749,14 +45751,14 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                             to: `/movies/${movieData._id}`,
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                lineNumber: 25
+                                                lineNumber: 26
                                             },
                                             __self: this,
                                             children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
                                                 variant: "link",
                                                 __source: {
                                                     fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                    lineNumber: 26
+                                                    lineNumber: 27
                                                 },
                                                 __self: this,
                                                 children: "Details"
@@ -45768,7 +45770,7 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                             ,
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                lineNumber: 29
+                                                lineNumber: 30
                                             },
                                             __self: this,
                                             children: "Remove from favourites"
@@ -45792,6 +45794,6 @@ $RefreshReg$(_c, "FavouriteMovies");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","react-router-dom":"cpyQW","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt"}],"jUTZ8":[function() {},{}]},["dyvfI","eCYxr","dLPEP"], "dLPEP", "parcelRequire6ce0")
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","react-router-dom":"cpyQW","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt","./favourite-movies.scss":"c6rQy"}],"c6rQy":[function() {},{}],"jUTZ8":[function() {},{}]},["dyvfI","eCYxr","dLPEP"], "dLPEP", "parcelRequire6ce0")
 
 //# sourceMappingURL=index.6701a6e1.js.map

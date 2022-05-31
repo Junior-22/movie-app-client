@@ -316,6 +316,41 @@
   margin-right: 20px;
   border: black;
 }
+:root {
+  --fontsize-movie-title: 30px;
+  --fontweight-movie-title: 400;
+  --fontsize-movie-year: 20px;
+  --fontweight-movie-year: 300;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #b7e5ff;
+  color: #33383a;
+}
+
+#favourite-movies {
+  border-color: #000000;
+  border-width: 2px;
+  height: 405px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#title {
+  margin-top: 20;
+  text-align: center;
+  font-size: var(--fontsize-movie-title);
+  font-weight: var(--fontweight-movie-title);
+}
+
+#update-user-button {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-right: 20px;
+  border: black;
+}
 .movie-app {
   color: #b7e5ff;
   margin-top: 100px;
