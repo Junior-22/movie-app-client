@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
+import "./user-data.scss"
 
 
 export function UserData(props) {
@@ -8,9 +9,9 @@ export function UserData(props) {
   return (
     <Row>
       <Col>
-        <Card>
-          <Card.Title>Profile</Card.Title>
-          <Card.Body>
+        <Card id="user-data">
+          <Card.Title id="title">Profile</Card.Title>
+          <Card.Body id="body">
             <p>Username: {userData.Username}</p>
             <p>Email: {userData.Email}</p>
             <p>Birthday: {userData.Birthday}</p>
