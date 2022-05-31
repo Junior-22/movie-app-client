@@ -9,13 +9,13 @@ export function ProfileView(props) {
 
   const [userData, setUserData] = useState({});
   const [updatedUser, setUpdatedUser] = useState({});
-  const [favouriteMoviesList, setFavouriteMoviesList] = useState({});
+  const [favouriteMoviesList, setFavouriteMoviesList] = useState([]);
 
   let token = localStorage.getItem("token");
   axios.defaults.headers.common["Authorization"] = "Bearer " + token;
 
   const getUserData = (cancelToken, Username) => {
-    axios.get(`https://movies2022app.herokuapp.com/users/${user}`, {
+    axios.get(`https://movies2022app.herokuapp.com/users/${userData}`, {
       cancelToken: cancelToken
     })
       .then(response => {
@@ -44,7 +44,7 @@ export function ProfileView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`https://movies2022app.herokuapp.com/users/${userdata.User}`, updatedUser)
+    axios.put(`https://movies2022app.herokuapp.com/users/${userData.User}`, updatedUser)
       .then(response => {
         setUserData(response.data);
         alert("profile updated");
