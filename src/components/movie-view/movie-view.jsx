@@ -22,12 +22,12 @@ export class MovieView extends React.Component {
                 <Card.Text className="movie-description" id="movie-description"> Description: {movieData.Description}</Card.Text>
                 <Card.Text className="movie-actors" id="movie-actors"> Actors: {movieData.Actors}</Card.Text>
                 <Card.Text id="movie-genre">
-                  <Link to={`/genre/${movieData.Genre.Name}`}>
+                  <Link to={`/genre/${movieData.Genre.Name}/${movieData.Title}`}>
                     <Button variant="link">Genre</Button>
                   </Link>
                 </Card.Text>
                 <Card.Text className="movie-director" id="movie-director">
-                  <Link to={`/director/${movieData.Director.Name}`}>
+                  <Link to={`/director/${movieData.Director.Name}/${movieData.Title}`}>
                     <Button variant="link">Director</Button>
                   </Link>
                 </Card.Text>
