@@ -46,6 +46,7 @@ export function ProfileView(props) {
   }, []);
 
   const handleSubmit = (e) => {
+    const Username = userData.Username
     e.preventDefault();
     axios.put(`https://movies2022app.herokuapp.com/users/${Username}`, updatedUser)
       .then(response => {
