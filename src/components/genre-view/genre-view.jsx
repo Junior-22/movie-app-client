@@ -7,7 +7,7 @@ import "./genre-view.scss";
 export class GenreView extends React.Component {
 
   render() {
-    const { genre, onBackClick } = this.props;
+    const { movie, onBackClick } = this.props;
 
     return (
       <Container>
@@ -15,9 +15,9 @@ export class GenreView extends React.Component {
           <Col>
             <Card className="genre-view" id="genre-view">
               <Card.Body>
-                <Card.Img className="movie-poster" id="movie-poster" variant="top" src={genre.ImagePath} crossOrigin="true" />
-                <Card.Title id="movie-title">{genre.Title}</Card.Title>
-                <Card.Text className="movie-genre" id="movie-genre"> Genre: {genre.Genre.Name}</Card.Text>
+                <Card.Img className="movie-poster" id="movie-poster" variant="top" src={movie.ImagePath} crossOrigin="true" />
+                <Card.Title id="movie-title">{movie.Title}</Card.Title>
+                <Card.Text className="movie-genre" id="movie-genre"> Genre: {movie.Genre.Name}</Card.Text>
               </Card.Body>
             </Card>
 
@@ -31,7 +31,7 @@ export class GenreView extends React.Component {
 }
 
 GenreView.propTypes = {
-  genre: PropTypes.shape({
+  movie: PropTypes.shape({
     Name: PropTypes.string.isRequired,
   }).isRequired,
 
