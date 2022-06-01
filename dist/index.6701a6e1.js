@@ -45240,7 +45240,7 @@ var _favouriteMovies = require("./favourite-movies");
 var _s = $RefreshSig$();
 function ProfileView(props) {
     _s();
-    console.log(props);
+    // console.log(props)
     const [userData, setUserData] = _react.useState({
     });
     const [updatedUser, setUpdatedUser] = _react.useState({
@@ -45256,8 +45256,7 @@ function ProfileView(props) {
             setUpdatedUser(response.data);
             setFavouriteMoviesList(props.movies.filter((m)=>response.data.FavouriteMovies.includes(m._id)
             ));
-            //setFavouriteMoviesList(response.data.FavouriteMovies);
-            console.log("these are the", favouriteMoviesList);
+        // console.log("these are the", favouriteMoviesList)
         }).catch((error)=>{
             console.log(error);
         });
@@ -45293,7 +45292,7 @@ function ProfileView(props) {
             localStorage.removeItem("token");
             window.open("/", "_self");
         }).catch((error)=>{
-            console.log("error");
+            console.log(error);
         });
     };
     const removeFav = (id)=>{
@@ -45302,25 +45301,25 @@ function ProfileView(props) {
             setFavouriteMoviesList(favouriteMoviesList.filter((movie)=>movie._id != id
             ));
         }).catch((error)=>{
-            console.log("error");
+            console.log(error);
         });
     };
     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
         __source: {
             fileName: "src/components/profile-view/profile-view.jsx",
-            lineNumber: 94
+            lineNumber: 93
         },
         __self: this,
         children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
             __source: {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 95
+                lineNumber: 94
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Col, {
                 __source: {
                     fileName: "src/components/profile-view/profile-view.jsx",
-                    lineNumber: 96
+                    lineNumber: 95
                 },
                 __self: this,
                 children: [
@@ -45328,7 +45327,7 @@ function ProfileView(props) {
                         userData: userData,
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 98
+                            lineNumber: 97
                         },
                         __self: this
                     }),
@@ -45337,7 +45336,7 @@ function ProfileView(props) {
                         removeFav: removeFav,
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 100
+                            lineNumber: 99
                         },
                         __self: this
                     }),
@@ -45347,21 +45346,21 @@ function ProfileView(props) {
                         handleUpdate: handleUpdate,
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 102
+                            lineNumber: 101
                         },
                         __self: this
                     }),
                     /*#__PURE__*/ _jsxRuntime.jsx("div", {
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 104
+                            lineNumber: 103
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav.Link, {
                             href: "/",
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 105
+                                lineNumber: 104
                             },
                             __self: this,
                             children: "back to movies"
@@ -45370,7 +45369,7 @@ function ProfileView(props) {
                     /*#__PURE__*/ _jsxRuntime.jsx("div", {
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 108
+                            lineNumber: 107
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
@@ -45379,7 +45378,7 @@ function ProfileView(props) {
                             onClick: deleteProfile,
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 109
+                                lineNumber: 108
                             },
                             __self: this,
                             children: "Delete Account"
@@ -45418,7 +45417,7 @@ var _reactBootstrap = require("react-bootstrap");
 var _userDataScss = require("./user-data.scss");
 function UserData(props) {
     const { userData  } = props;
-    console.log("user data: ", userData);
+    // console.log("user data: ", userData)
     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
         __source: {
             fileName: "src/components/profile-view/user-data.jsx",
@@ -45523,7 +45522,7 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactBootstrap = require("react-bootstrap");
 var _updateUserScss = require("./update-user.scss");
 function UpdatedUser(props) {
-    console.log("UpdatedUser: ", props);
+    // console.log("UpdatedUser: ", props)
     const { handleSubmit , handleUpdate , updatedUser  } = props;
     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
         __source: {
@@ -45705,7 +45704,7 @@ var _reactRouterDom = require("react-router-dom");
 var _favouriteMoviesScss = require("./favourite-movies.scss");
 var _movieView = require("../movie-view/movie-view");
 function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
-    console.log("favourite-movie class: ", favouriteMoviesList);
+    // console.log("favourite-movie class: ", favouriteMoviesList);
     return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Container, {
         className: "col-remove-padding",
         __source: {
