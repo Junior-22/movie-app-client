@@ -6,7 +6,7 @@ import "../movie-view/movie-view";
 
 
 export function FavouriteMovies({ favouriteMoviesList, removeFav }) {
-  console.log("favourite-movie class: ", favouriteMoviesList);
+  // console.log("favourite-movie class: ", favouriteMoviesList);
 
   return (
     <Container className="col-remove-padding">

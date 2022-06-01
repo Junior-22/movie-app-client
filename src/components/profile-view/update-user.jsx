@@ -3,7 +3,7 @@ import { Row, Col, Button, Card, Form } from "react-bootstrap";
 import "./update-user.scss"
 
 export function UpdatedUser(props) {
-  console.log("UpdatedUser: ", props)
+  // console.log("UpdatedUser: ", props)
 
   const { handleSubmit, handleUpdate, updatedUser } = props;
 

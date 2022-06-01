@@ -5,7 +5,7 @@ import "./user-data.scss"
 
 export function UserData(props) {
   const { userData } = props;
-  console.log("user data: ", userData)
+  // console.log("user data: ", userData)
 
   return (
     <Row>

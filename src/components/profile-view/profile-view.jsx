@@ -6,7 +6,7 @@ import { UpdatedUser } from "./update-user";
 import { FavouriteMovies } from "./favourite-movies";
 
 export function ProfileView(props) {
-  console.log(props)
+  // console.log(props)
 
   const [userData, setUserData] = useState({});
   const [updatedUser, setUpdatedUser] = useState({});
@@ -23,8 +23,7 @@ export function ProfileView(props) {
         setUserData(response.data);
         setUpdatedUser(response.data);
         setFavouriteMoviesList(props.movies.filter(m => response.data.FavouriteMovies.includes(m._id)));
-        //setFavouriteMoviesList(response.data.FavouriteMovies);
-        console.log("these are the", favouriteMoviesList)
+        // console.log("these are the", favouriteMoviesList)
       })
       .catch(error => {
         console.log(error);
@@ -74,7 +73,7 @@ export function ProfileView(props) {
         window.open("/", "_self");
       })
       .catch(error => {
-        console.log("error");
+        console.log(error);
       });
   }
 
@@ -85,7 +84,7 @@ export function ProfileView(props) {
         setFavouriteMoviesList(favouriteMoviesList.filter(movie => movie._id != id));
       })
       .catch(error => {
-        console.log("error");
+        console.log(error);
       });
   }
 
