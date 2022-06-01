@@ -7,8 +7,8 @@ import { FavouriteMovies } from "./favourite-movies";
 
 export function ProfileView(props) {
 
-  const [userData, setUserData] = useState({});
-  const [updatedUser, setUpdatedUser] = useState({});
+  const [userData, setUserData] = useState("");
+  const [updatedUser, setUpdatedUser] = useState("");
   const [favouriteMoviesList, setFavouriteMoviesList] = useState([]);
 
   let token = localStorage.getItem("token");
