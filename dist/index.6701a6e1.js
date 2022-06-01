@@ -45213,10 +45213,8 @@ var _favouriteMovies = require("./favourite-movies");
 var _s = $RefreshSig$();
 function ProfileView(props) {
     _s();
-    const [userData, setUserData] = _react.useState({
-    });
-    const [updatedUser, setUpdatedUser] = _react.useState({
-    });
+    const [userData, setUserData] = _react.useState("");
+    const [updatedUser, setUpdatedUser] = _react.useState("");
     const [favouriteMoviesList, setFavouriteMoviesList] = _react.useState([]);
     let token = localStorage.getItem("token");
     _axiosDefault.default.defaults.headers.common["Authorization"] = "Bearer " + token;
@@ -45359,7 +45357,7 @@ function ProfileView(props) {
         })
     }));
 }
-_s(ProfileView, "ocHZxyxU7e589bXdq483dCMPdYM=");
+_s(ProfileView, "1ag1zApVSVvIFK9Cs+9pEMy7OI4=");
 _c = ProfileView;
 var _c;
 $RefreshReg$(_c, "ProfileView");
@@ -45473,7 +45471,7 @@ $RefreshReg$(_c, "UserData");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt","./user-data.scss":"6Ncx3"}],"6Ncx3":[function() {},{}],"hBcEf":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","./user-data.scss":"6Ncx3","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt"}],"6Ncx3":[function() {},{}],"hBcEf":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f560 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -45645,7 +45643,7 @@ $RefreshReg$(_c, "UpdatedUser");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt","./update-user.scss":"7nC2l"}],"7nC2l":[function() {},{}],"eyuZB":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","./update-user.scss":"7nC2l","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt"}],"7nC2l":[function() {},{}],"eyuZB":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$c217 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -45794,6 +45792,6 @@ $RefreshReg$(_c, "FavouriteMovies");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","react-router-dom":"cpyQW","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt","./favourite-movies.scss":"c6rQy"}],"c6rQy":[function() {},{}],"jUTZ8":[function() {},{}]},["dyvfI","eCYxr","dLPEP"], "dLPEP", "parcelRequire6ce0")
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","react-router-dom":"cpyQW","./favourite-movies.scss":"c6rQy","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt"}],"c6rQy":[function() {},{}],"jUTZ8":[function() {},{}]},["dyvfI","eCYxr","dLPEP"], "dLPEP", "parcelRequire6ce0")
 
 //# sourceMappingURL=index.6701a6e1.js.map
