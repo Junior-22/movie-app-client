@@ -5,12 +5,13 @@ import "./user-data.scss"
 
 export function UserData(props) {
   const { userData } = props;
+  console.log("user data: ", userData)
 
   return (
     <Row>
-      <Col>
+      <Col key={userData._id}>
         <Card id="user-data">
-          <Card.Title id="title">Profile</Card.Title>
+          <Card.Title className="card-title-custom" id="title">Profile</Card.Title>
           <Card.Body id="body">
             <p>Username: {userData.Username}</p>
             <p>Email: {userData.Email}</p>
