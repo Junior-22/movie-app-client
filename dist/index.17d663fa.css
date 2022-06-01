@@ -265,7 +265,7 @@
 #user-data {
   border-color: #000000;
   border-width: 2px;
-  height: 250px;
+  min-height: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -352,7 +352,7 @@
 
 #update-user-button {
   margin-top: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   margin-right: 20px;
   border: black;
 }
