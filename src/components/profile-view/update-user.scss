@@ -19,7 +19,7 @@ $main-color: #000000;
 #update-user {
   border-color: $main-color;
   border-width: 2px;
-  height: 405px;
+  min-height: 50px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -33,7 +33,7 @@ $main-color: #000000;
 
 #update-user-button {
   margin-top: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   margin-right: 20px;
   border: black;
 }
