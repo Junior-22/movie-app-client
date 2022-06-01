@@ -6,25 +6,28 @@ import { UpdatedUser } from "./update-user";
 import { FavouriteMovies } from "./favourite-movies";
 
 export function ProfileView(props) {
+  console.log(props)
 
-  const [userData, setUserData] = useState("");
-  const [updatedUser, setUpdatedUser] = useState("");
+  const [userData, setUserData] = useState({});
+  const [updatedUser, setUpdatedUser] = useState({});
   const [favouriteMoviesList, setFavouriteMoviesList] = useState([]);
 
   let token = localStorage.getItem("token");
   axios.defaults.headers.common["Authorization"] = "Bearer " + token;
 
   const getUserData = (cancelToken, Username) => {
-    axios.get(`https://movies2022app.herokuapp.com/users/${userData}`, {
+    axios.get(`https://movies2022app.herokuapp.com/users/${Username}`, {
       cancelToken: cancelToken
     })
       .then(response => {
         setUserData(response.data);
         setUpdatedUser(response.data);
         setFavouriteMoviesList(props.movies.filter(m => response.data.FavouriteMovies.includes(m._id)));
+        //setFavouriteMoviesList(response.data.FavouriteMovies);
+        console.log("these are the", favouriteMoviesList)
       })
       .catch(error => {
-        console.log("error");
+        console.log(error);
       })
   }
 
@@ -44,13 +47,13 @@ export function ProfileView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`https://movies2022app.herokuapp.com/users/${userData.User}`, updatedUser)
+    axios.put(`https://movies2022app.herokuapp.com/users/${Username}`, updatedUser)
       .then(response => {
         setUserData(response.data);
         alert("profile updated");
       })
       .catch(error => {
-        console.log("error");
+        console.log(error);
       });
   }
 
@@ -62,7 +65,7 @@ export function ProfileView(props) {
   }
 
   const deleteProfile = (e) => {
-    axios.delete(`https://movies2022app.herokuapp.com/users/${userdata.User}`)
+    axios.delete(`https://movies2022app.herokuapp.com/users/${Username}`)
       .then(response => {
         alert("account deleted");
         localStorage.removeItem("user");
@@ -75,7 +78,7 @@ export function ProfileView(props) {
   }
 
   const removeFav = (id) => {
-    axios.delete(`https://movies2022app.herokuapp.com/users/${userdata.User}/movies/${movieData._id}`)
+    axios.delete(`https://movies2022app.herokuapp.com/users/${Username}/movies/${movieData._id}`)
       .then(() => {
         // change FavouriteMovieList state and render component
         setFavouriteMoviesList(favouriteMoviesList.filter(movie => movie._id != id));
@@ -91,11 +94,11 @@ export function ProfileView(props) {
       <Row>
         <Col>
 
-          <UserData userData={UserData} />
+          <UserData userData={userData} />
 
           <FavouriteMovies favouriteMoviesList={favouriteMoviesList} removeFav={removeFav} />
 
-          <UpdatedUser userData={userData} handleSubmit={handleSubmit} handleUpdate={handleUpdate} />
+          <UpdatedUser updatedUser={updatedUser} handleSubmit={handleSubmit} handleUpdate={handleUpdate} />
 
           <div>
             <Nav.Link href="/">back to movies</Nav.Link>
