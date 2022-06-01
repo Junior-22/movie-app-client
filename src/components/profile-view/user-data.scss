@@ -19,7 +19,7 @@ $main-color: #000000;
 #user-data {
   border-color: $main-color;
   border-width: 2px;
-  height: 250px;
+  min-height: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
