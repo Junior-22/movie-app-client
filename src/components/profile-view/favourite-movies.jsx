@@ -11,7 +11,7 @@ export function FavouriteMovies({ favouriteMoviesList, removeFav }) {
   return (
     <Container className="col-remove-padding">
       <Row>
-        <Col >
+        <Col>
           <h3 id="title">Favourite Movies</h3>
 
           {favouriteMoviesList.map((movieData) => {
@@ -33,10 +33,6 @@ export function FavouriteMovies({ favouriteMoviesList, removeFav }) {
             )
           })}
         </Col>
-
-      </Row>
-
-      <Row>
 
       </Row>
     </Container>
