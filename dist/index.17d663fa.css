@@ -335,12 +335,12 @@
   color: #33383a;
 }
 
-#favourite-movies {
+#fav-movies {
   border-color: #000000;
   border-width: 2px;
-  height: 405px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  min-height: 500px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 #title {
