@@ -92,23 +92,26 @@ export function ProfileView(props) {
   return (
     <Container>
       <Row>
-        <Col>
-
+        <Col xs={12} sm={4}>
           <UserData userData={userData} />
-
-          <FavouriteMovies favouriteMoviesList={favouriteMoviesList} removeFav={removeFav} />
-
-          <UpdatedUser updatedUser={updatedUser} handleSubmit={handleSubmit} handleUpdate={handleUpdate} />
-
-          <div>
-            <Nav.Link href="/">back to movies</Nav.Link>
-          </div>
-
-          <div>
-            <Button variant="primary" type="submit" onClick={deleteProfile}>Delete Account</Button>
-          </div>
-
         </Col>
+        <Col xs={12} sm={8}>
+          <UpdatedUser updatedUser={updatedUser} handleSubmit={handleSubmit} handleUpdate={handleUpdate} />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <FavouriteMovies favouriteMoviesList={favouriteMoviesList} removeFav={removeFav} />
+        </Col>
+      </Row>
+      <Row>
+        <div>
+          <Nav.Link href="/">back to movies</Nav.Link>
+        </div>
+
+        <div>
+          <Button variant="primary" type="submit" onClick={deleteProfile}>Delete Account</Button>
+        </div>
       </Row>
     </Container>
   );
