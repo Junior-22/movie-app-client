@@ -16,12 +16,12 @@ $main-color: #000000;
   color: $text-color;
 }
 
-#favourite-movies {
+#fav-movies {
   border-color: $main-color;
   border-width: 2px;
-  height: 405px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  min-height: 500px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 #title {
