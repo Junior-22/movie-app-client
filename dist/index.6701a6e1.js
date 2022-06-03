@@ -45730,7 +45730,6 @@ $parcel$ReactRefreshHelpers$c217.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-// import "../movie-view/movie-view";
 parcelHelpers.export(exports, "FavouriteMovies", ()=>FavouriteMovies
 );
 var _jsxRuntime = require("react/jsx-runtime");
@@ -45745,28 +45744,28 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
         className: "col-remove-padding",
         __source: {
             fileName: "src/components/profile-view/favourite-movies.jsx",
-            lineNumber: 12
+            lineNumber: 11
         },
         __self: this,
         children: [
             /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
                 __source: {
                     fileName: "src/components/profile-view/favourite-movies.jsx",
-                    lineNumber: 13
+                    lineNumber: 12
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                     xs: 12,
                     __source: {
                         fileName: "src/components/profile-view/favourite-movies.jsx",
-                        lineNumber: 14
+                        lineNumber: 13
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx("h3", {
                         id: "title",
                         __source: {
                             fileName: "src/components/profile-view/favourite-movies.jsx",
-                            lineNumber: 15
+                            lineNumber: 14
                         },
                         __self: this,
                         children: "Favourite Movies"
@@ -45776,7 +45775,7 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
             /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
                 __source: {
                     fileName: "src/components/profile-view/favourite-movies.jsx",
-                    lineNumber: 18
+                    lineNumber: 17
                 },
                 __self: this,
                 children: favouriteMoviesList.map((movieData)=>{
@@ -45786,14 +45785,14 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                         lg: 3,
                         __source: {
                             fileName: "src/components/profile-view/favourite-movies.jsx",
-                            lineNumber: 21
+                            lineNumber: 20
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card, {
                             id: "fav-movies",
                             __source: {
                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                lineNumber: 22
+                                lineNumber: 21
                             },
                             __self: this,
                             children: [
@@ -45803,21 +45802,21 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                     crossOrigin: "true",
                                     __source: {
                                         fileName: "src/components/profile-view/favourite-movies.jsx",
-                                        lineNumber: 23
+                                        lineNumber: 22
                                     },
                                     __self: this
                                 }),
                                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
                                     __source: {
                                         fileName: "src/components/profile-view/favourite-movies.jsx",
-                                        lineNumber: 24
+                                        lineNumber: 23
                                     },
                                     __self: this,
                                     children: [
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Title, {
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                lineNumber: 25
+                                                lineNumber: 24
                                             },
                                             __self: this,
                                             children: movieData.Title
@@ -45825,7 +45824,7 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Card.Subtitle, {
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                lineNumber: 26
+                                                lineNumber: 25
                                             },
                                             __self: this,
                                             children: movieData.Year
@@ -45834,14 +45833,14 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                             to: `/movies/${movieData._id}`,
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                lineNumber: 27
+                                                lineNumber: 26
                                             },
                                             __self: this,
                                             children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
                                                 variant: "link",
                                                 __source: {
                                                     fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                    lineNumber: 28
+                                                    lineNumber: 27
                                                 },
                                                 __self: this,
                                                 children: "Details"
@@ -45853,7 +45852,7 @@ function FavouriteMovies({ favouriteMoviesList , removeFav  }) {
                                             ,
                                             __source: {
                                                 fileName: "src/components/profile-view/favourite-movies.jsx",
-                                                lineNumber: 31
+                                                lineNumber: 30
                                             },
                                             __self: this,
                                             children: "Remove from favourites"
