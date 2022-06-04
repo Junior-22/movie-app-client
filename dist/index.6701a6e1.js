@@ -45084,9 +45084,7 @@ class DirectorView extends _reactDefault.default.Component {
     }
 }
 DirectorView.propTypes = {
-    movie: _propTypesDefault.default.shape({
-        Name: _propTypesDefault.default.string.isRequired
-    }).isRequired,
+    movie: _propTypesDefault.default.object.isRequired,
     onBackClick: _propTypesDefault.default.func.isRequired
 };
 
@@ -45206,9 +45204,7 @@ class GenreView extends _reactDefault.default.Component {
     }
 }
 GenreView.propTypes = {
-    movie: _propTypesDefault.default.shape({
-        Name: _propTypesDefault.default.string.isRequired
-    }).isRequired,
+    movie: _propTypesDefault.default.object.isRequired,
     onBackClick: _propTypesDefault.default.func.isRequired
 };
 
@@ -45286,20 +45282,24 @@ function ProfileView(props) {
         });
     };
     const deleteProfile = (e)=>{
+        const Username = userData.Username;
         _axiosDefault.default.delete(`https://movies2022app.herokuapp.com/users/${Username}`).then((response)=>{
             alert("account deleted");
             localStorage.removeItem("user");
             localStorage.removeItem("token");
             window.open("/", "_self");
+            alert("Account successfully deleted");
         }).catch((error)=>{
             console.log(error);
         });
     };
     const removeFav = (id)=>{
-        _axiosDefault.default.delete(`https://movies2022app.herokuapp.com/users/${Username}/movies/${movieData._id}`).then(()=>{
+        const Username = userData.Username;
+        _axiosDefault.default.delete(`https://movies2022app.herokuapp.com/users/${Username}/movies/${id}`).then(()=>{
             // change FavouriteMovieList state and render component
             setFavouriteMoviesList(favouriteMoviesList.filter((movie)=>movie._id != id
             ));
+            alert("Movie successfully removed");
         }).catch((error)=>{
             console.log(error);
         });
@@ -45307,14 +45307,14 @@ function ProfileView(props) {
     return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Container, {
         __source: {
             fileName: "src/components/profile-view/profile-view.jsx",
-            lineNumber: 93
+            lineNumber: 97
         },
         __self: this,
         children: [
             /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                 __source: {
                     fileName: "src/components/profile-view/profile-view.jsx",
-                    lineNumber: 94
+                    lineNumber: 98
                 },
                 __self: this,
                 children: [
@@ -45323,14 +45323,14 @@ function ProfileView(props) {
                         sm: 4,
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 95
+                            lineNumber: 99
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsx(_userData.UserData, {
                             userData: userData,
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 96
+                                lineNumber: 100
                             },
                             __self: this
                         })
@@ -45340,7 +45340,7 @@ function ProfileView(props) {
                         sm: 8,
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 98
+                            lineNumber: 102
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsx(_updateUser.UpdatedUser, {
@@ -45349,7 +45349,7 @@ function ProfileView(props) {
                             handleUpdate: handleUpdate,
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 99
+                                lineNumber: 103
                             },
                             __self: this
                         })
@@ -45359,13 +45359,13 @@ function ProfileView(props) {
             /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Row, {
                 __source: {
                     fileName: "src/components/profile-view/profile-view.jsx",
-                    lineNumber: 102
+                    lineNumber: 106
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Col, {
                     __source: {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 103
+                        lineNumber: 107
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx(_favouriteMovies.FavouriteMovies, {
@@ -45373,7 +45373,7 @@ function ProfileView(props) {
                         removeFav: removeFav,
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 104
+                            lineNumber: 108
                         },
                         __self: this
                     })
@@ -45382,21 +45382,21 @@ function ProfileView(props) {
             /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Row, {
                 __source: {
                     fileName: "src/components/profile-view/profile-view.jsx",
-                    lineNumber: 107
+                    lineNumber: 111
                 },
                 __self: this,
                 children: [
                     /*#__PURE__*/ _jsxRuntime.jsx("div", {
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 108
+                            lineNumber: 112
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Nav.Link, {
                             href: "/",
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 109
+                                lineNumber: 113
                             },
                             __self: this,
                             children: "back to movies"
@@ -45405,7 +45405,7 @@ function ProfileView(props) {
                     /*#__PURE__*/ _jsxRuntime.jsx("div", {
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 112
+                            lineNumber: 116
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
@@ -45414,7 +45414,7 @@ function ProfileView(props) {
                             onClick: deleteProfile,
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 113
+                                lineNumber: 117
                             },
                             __self: this,
                             children: "Delete Account"
