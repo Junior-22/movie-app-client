@@ -32,9 +32,6 @@ export class DirectorView extends React.Component {
 }
 
 DirectorView.propTypes = {
-  movie: PropTypes.shape({
-    Name: PropTypes.string.isRequired,
-  }).isRequired,
-
+  movie: PropTypes.object.isRequired,
   onBackClick: PropTypes.func.isRequired
 };
