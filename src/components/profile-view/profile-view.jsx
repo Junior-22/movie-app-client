@@ -65,12 +65,14 @@ export function ProfileView(props) {
   }
 
   const deleteProfile = (e) => {
+    const Username = userData.Username
     axios.delete(`https://movies2022app.herokuapp.com/users/${Username}`)
       .then(response => {
         alert("account deleted");
         localStorage.removeItem("user");
         localStorage.removeItem("token");
         window.open("/", "_self");
+        alert("Account successfully deleted")
       })
       .catch(error => {
         console.log(error);
@@ -78,10 +80,12 @@ export function ProfileView(props) {
   }
 
   const removeFav = (id) => {
-    axios.delete(`https://movies2022app.herokuapp.com/users/${Username}/movies/${movieData._id}`)
+    const Username = userData.Username
+    axios.delete(`https://movies2022app.herokuapp.com/users/${Username}/movies/${id}`)
       .then(() => {
         // change FavouriteMovieList state and render component
         setFavouriteMoviesList(favouriteMoviesList.filter(movie => movie._id != id));
+        alert("Movie successfully removed")
       })
       .catch(error => {
         console.log(error);
