@@ -23,19 +23,17 @@ export function FavouriteMovies({ favouriteMoviesList, removeFav }) {
                 <Card.Body>
                   <Card.Title>{movieData.Title}</Card.Title>
                   <Card.Subtitle>{movieData.Year}</Card.Subtitle>
-                  <Link to={`/movies/${movieData._id}`}>
+                  {/* <Link to={`/movies/${movieData._id}`}>
                     <Button variant="link">Details</Button>
-                  </Link>
+                  </Link> */}
 
-                  <Button variant="primary" onClick={() => removeFav(movieData._id)}>Remove from favourites</Button>
+                  <Button id="fav-movies-button" variant="danger" onClick={() => removeFav(movieData._id)}>Remove movie</Button>
                 </Card.Body>
               </Card>
             </Col>
           )
         })}
       </Row>
-
-
     </Container>
   )
 }
