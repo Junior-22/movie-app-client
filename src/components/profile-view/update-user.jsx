@@ -42,6 +42,14 @@ export function UpdatedUser(props) {
                   onChange={e => handleUpdate(e)} />
               </Form.Group>
 
+              <Form.Group controlId="formBirthday">
+                <Form.Label>Birthday</Form.Label>
+                <Form.Control
+                  type="date"
+                  name="Birthday"
+                  onChange={e => handleUpdate(e)} />
+              </Form.Group>
+
               <Button id="update-user-button" variant="primary" type="submit" onClick={handleSubmit}>Update</Button>
 
             </Form>
