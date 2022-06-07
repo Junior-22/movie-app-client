@@ -45692,6 +45692,35 @@ function UpdatedUser(props) {
                                         })
                                     ]
                                 }),
+                                /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Form.Group, {
+                                    controlId: "formBirthday",
+                                    __source: {
+                                        fileName: "src/components/profile-view/update-user.jsx",
+                                        lineNumber: 45
+                                    },
+                                    __self: this,
+                                    children: [
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
+                                            __source: {
+                                                fileName: "src/components/profile-view/update-user.jsx",
+                                                lineNumber: 46
+                                            },
+                                            __self: this,
+                                            children: "Birthday"
+                                        }),
+                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
+                                            type: "date",
+                                            name: "Birthday",
+                                            onChange: (e)=>handleUpdate(e)
+                                            ,
+                                            __source: {
+                                                fileName: "src/components/profile-view/update-user.jsx",
+                                                lineNumber: 47
+                                            },
+                                            __self: this
+                                        })
+                                    ]
+                                }),
                                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
                                     id: "update-user-button",
                                     variant: "primary",
@@ -45699,7 +45728,7 @@ function UpdatedUser(props) {
                                     onClick: handleSubmit,
                                     __source: {
                                         fileName: "src/components/profile-view/update-user.jsx",
-                                        lineNumber: 45
+                                        lineNumber: 53
                                     },
                                     __self: this,
                                     children: "Update"
