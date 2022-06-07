@@ -105,7 +105,7 @@ export class MainView extends React.Component {
 
             return movies.map(m => (
               <Col md={3} key={m._id}>
-                <MovieCard movieData={m} addMovieToFavourites={this.addMovieToFavourites} />
+                <MovieCard movieData={m} />
               </Col>
             ))
           }} />
@@ -125,7 +125,7 @@ export class MainView extends React.Component {
             // Before movies are loaded
             if (movies.length === 0) return <div className="main-view" />;
             return <Col md={8}>
-              <MovieView movieData={movies.find(m => m._id === match.params.movieId)} onBackClick={() => history.goBack()} />
+              <MovieView movieData={movies.find(m => m._id === match.params.movieId)} onBackClick={() => history.goBack()} addMovieToFavourites={this.addMovieToFavourites} />
             </Col>
           }} />
 
