@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Container, Row, Col, Button, Nav } from "react-bootstrap";
+import { Container, Row, Col, Button, Nav, Card } from "react-bootstrap";
 import { UserData } from "./user-data";
 import { UpdatedUser } from "./update-user";
 import { FavouriteMovies } from "./favourite-movies";
+import "./profile-view.scss"
 
 export function ProfileView(props) {
   // console.log(props)
@@ -104,18 +105,17 @@ export function ProfileView(props) {
         </Col>
       </Row>
       <Row>
+        <div>
+          <Nav.Link href="/">back to movies</Nav.Link>
+        </div>
         <Col>
           <FavouriteMovies favouriteMoviesList={favouriteMoviesList} removeFav={removeFav} />
         </Col>
       </Row>
       <Row>
-        <div>
-          <Nav.Link href="/">back to movies</Nav.Link>
-        </div>
-
-        <div>
-          <Button variant="primary" type="submit" onClick={deleteProfile}>Delete Account</Button>
-        </div>
+        <Card id="delete-button">
+          <Button variant="danger" type="submit" onClick={deleteProfile}>Delete Account</Button>
+        </Card>
       </Row>
     </Container>
   );
