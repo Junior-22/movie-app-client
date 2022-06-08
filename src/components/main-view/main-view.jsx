@@ -21,7 +21,8 @@ export class MainView extends React.Component {
     // Initial state is set to null
     this.state = {
       movies: [],
-      user: null
+      user: null,
+      favourites: []
     };
   }
 
@@ -40,10 +41,23 @@ export class MainView extends React.Component {
       });
   }
 
+  getUser() {
+    let username = localStorage.getItem("user");
+    let token = localStorage.getItem("token");
+    axios.get(`https://movies2022app.herokuapp.com/users/${username}`, {
+      headers: { Authorization: "Bearer " + token }
+    }).then(response => {
+      this.setState({
+        favourites: response.data.FavouriteMovies
+      });
+    })
+  }
+
   // persist log in data in the browser
   componentDidMount() {
     let accessToken = localStorage.getItem("token");
     if (accessToken !== null) {
+      this.getUser()
       this.setState({
         user: localStorage.getItem("user")
       });
@@ -79,7 +93,9 @@ export class MainView extends React.Component {
       headers: { Authorization: "Bearer " + token }
     })
       .then(response => {
-        // console.log("movie added")
+        this.setState({
+          favourites: this.state.favourites.concat(movieId)
+        })
         alert("successfully added")
       })
       .catch(function (error) {
@@ -88,7 +104,7 @@ export class MainView extends React.Component {
   }
 
   render() {
-    const { movies, user, } = this.state;
+    const { movies, user, favourites } = this.state;
 
     return (
       <Router>
@@ -105,7 +121,7 @@ export class MainView extends React.Component {
 
             return movies.map(m => (
               <Col md={3} key={m._id}>
-                <MovieCard movieData={m} />
+                <MovieCard movieData={m} favourites={favourites} addMovieToFavourites={this.addMovieToFavourites} />
               </Col>
             ))
           }} />
@@ -125,7 +141,7 @@ export class MainView extends React.Component {
             // Before movies are loaded
             if (movies.length === 0) return <div className="main-view" />;
             return <Col md={8}>
-              <MovieView movieData={movies.find(m => m._id === match.params.movieId)} onBackClick={() => history.goBack()} addMovieToFavourites={this.addMovieToFavourites} />
+              <MovieView movieData={movies.find(m => m._id === match.params.movieId)} onBackClick={() => history.goBack()} />
             </Col>
           }} />
 
@@ -186,6 +202,7 @@ export class MainView extends React.Component {
     );
   }
 }
+
 
 
 
