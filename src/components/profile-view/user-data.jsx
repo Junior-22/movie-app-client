@@ -1,6 +1,5 @@
 import React from "react";
 import moment from "moment";
-import "moment-timezone";
 import { Card, Row, Col } from "react-bootstrap";
 import "./user-data.scss"
 
@@ -18,7 +17,7 @@ export function UserData(props) {
           <Card.Body id="body">
             <p>Username: {userData.Username}</p>
             <p>Email: {userData.Email}</p>
-            <p>Birthday: {moment(userData.Birthday).format}</p>
+            <p>Birthday: {moment(userData.Birthday).format("DD - MM - YYYY")}</p>
           </Card.Body>
         </Card>
       </Col>
