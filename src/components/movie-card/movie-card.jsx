@@ -7,7 +7,10 @@ import "./movie-card.scss";
 // display movies rendered on MainView
 export class MovieCard extends React.Component {
   render() {
-    const { movieData } = this.props;
+    const { movieData, addMovieToFavourites, favourites } = this.props;
+    // console.log(favourites)
+
+    const hideAddToFavouritesButton = favourites.find(id => id === movieData._id)
 
     return (
       <Card className="movie-card" id="movie-card">
@@ -18,6 +21,7 @@ export class MovieCard extends React.Component {
           <Link to={`/movies/${movieData._id}`}>
             <Button variant="link">see more</Button>
           </Link>
+          {hideAddToFavouritesButton ? "In favourites list" : <Button variant="dark" onClick={() => addMovieToFavourites(movieData._id)}>Add to Favourites</Button>}
         </Card.Body>
       </Card>
     );
