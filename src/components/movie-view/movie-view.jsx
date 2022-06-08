@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Card, Col, Container, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom"
@@ -9,7 +9,6 @@ export class MovieView extends React.Component {
 
   render() {
     const { movieData, onBackClick, addMovieToFavourites } = this.props;
-    const { show, setShow } = React.useState(false);
 
     return (
       <Container>
@@ -32,7 +31,7 @@ export class MovieView extends React.Component {
                     <Button variant="link">Director</Button>
                   </Link>
                 </Card.Text>
-                <Button variant="dark" onClick={() => { addMovieToFavourites(movieData._id); setShow(prev => !prev) }}>Add to Favourites</Button>
+                {/* <Button variant="dark" onClick={() => addMovieToFavourites(movieData._id) }>Add to Favourites</Button> */}
               </Card.Body>
             </Card>
             <Button id="movie-view-button" onClick={() => { onBackClick(null); }}>Back</Button>
