@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 import { Row, Col, Button, Card, Form } from "react-bootstrap";
 import "./update-user.scss"
 
@@ -47,6 +48,8 @@ export function UpdatedUser(props) {
                 <Form.Control
                   type="date"
                   name="Birthday"
+                  format="dd-mm-yyyy"
+                  defaultValue={moment(updatedUser.Birthday).format("YYYY-MM-DD")}
                   onChange={e => handleUpdate(e)} />
               </Form.Group>
 
