@@ -24,7 +24,7 @@ export function NavbarView({ user }) {
   return (
     <Navbar collapseOnSelect expand="sm" id="navbar" sticky="top">
       <Container id="navbar-container">
-        <Navbar.Brand id="navbar-brand" href="logo">Movie-app</Navbar.Brand>
+        <Navbar.Brand id="navbar-brand" href="/">Movie-app</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
         <Nav id="nav" className="ms-auto">
