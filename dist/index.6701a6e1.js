@@ -44572,7 +44572,7 @@ function NavbarView({ user  }) {
             children: [
                 /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Navbar.Brand, {
                     id: "navbar-brand",
-                    href: "logo",
+                    href: "/",
                     __source: {
                         fileName: "src/components/navbar-view/navbar-view.jsx",
                         lineNumber: 27
