@@ -1,41 +1,60 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { Card, Col, Container, Row, Button } from "react-bootstrap";
+import { Link } from "react-router-dom"
+
+import "./movie-view.scss";
 
 export class MovieView extends React.Component {
 
   render() {
-    const { movieData, onBackClick } = this.props;
+    const { movieData, onBackClick, addMovieToFavourites } = this.props;
 
     return (
-      <div className="movie-view">
-        <div className="movie-poster">
-          <img src={movieData.ImagePath} crossorigin="anonymous" />
-        </div>
-        <div className="movie-title">
-          <span className="label">Title: </span>
-          <span className="value">{movieData.Title}</span>
-        </div>
-        <div className="movie-year">
-          <span className="label">Year: </span>
-          <span className="value">{movieData.Year}</span>
-        </div>
-        <div className="movie-description">
-          <span className="label">Description: </span>
-          <span className="value">{movieData.Description}</span>
-        </div>
-        <div className="movie-genre">
-          <span className="label">Genre: </span>
-          <span className="value">{movieData.Genre.Name}</span>
-        </div>
-        <div className="movie-director">
-          <span className="label">Director: </span>
-          <span className="value">{movieData.Director.Name}</span>
-        </div>
-        <div className="movie-actors">
-          <span className="label">Actors: </span>
-          <span className="value">{movieData.Actors}</span>
-        </div>
-        <button onClick={() => { onBackClick(null); }}>Back</button>
-      </div>
+      <Container>
+        <Row>
+          <Col>
+            <Card className="movie-view" id="movie-view">
+              <Card.Body>
+                <Card.Img className="movie-poster" id="movie-poster" variant="top" src={movieData.ImagePath} crossOrigin="true" />
+                <Card.Title className="movie-title" id="movie-title">{movieData.Title}</Card.Title>
+                <Card.Text className="movie-year" id="movie-year"> Year: {movieData.Year}</Card.Text>
+                <Card.Text className="movie-description" id="movie-description"> Description: {movieData.Description}</Card.Text>
+                <Card.Text className="movie-actors" id="movie-actors"> Actors: {movieData.Actors}</Card.Text>
+                <Card.Text id="movie-genre">
+                  <Link to={`/genre/${movieData.Genre.Name}/${movieData.Title}`}>
+                    <Button variant="link">Genre</Button>
+                  </Link>
+                </Card.Text>
+                <Card.Text className="movie-director" id="movie-director">
+                  <Link to={`/director/${movieData.Director.Name}/${movieData.Title}`}>
+                    <Button variant="link">Director</Button>
+                  </Link>
+                </Card.Text>
+                {/* <Button variant="dark" onClick={() => addMovieToFavourites(movieData._id) }>Add to Favourites</Button> */}
+              </Card.Body>
+            </Card>
+            <Button id="movie-view-button" onClick={() => { onBackClick(null); }}>Back</Button>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
+
+MovieView.propTypes = {
+  movieData: PropTypes.shape({
+    Title: PropTypes.string.isRequired,
+    ImagePath: PropTypes.string.isRequired,
+    Year: PropTypes.string.isRequired,
+    Description: PropTypes.string.isRequired,
+    Genre: PropTypes.shape({
+      Name: PropTypes.string,
+    }),
+    Director: PropTypes.shape({
+      Name: PropTypes.string,
+    }),
+  }).isRequired,
+
+  onBackClick: PropTypes.func.isRequired
+};
