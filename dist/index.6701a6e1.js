@@ -27875,7 +27875,9 @@ class MainView extends _reactDefault.default.Component {
                                     })
                                 }));
                                 // Before movies are loaded
-                                // if (movies.length === 0) return <div className="main-view" />;
+                                if (movies.length === 0) return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                    className: "main-view"
+                                }));
                                 // return movies.map(m => (
                                 //   <Col md={3} key={m._id}>
                                 //     <MovieCard movieData={m} favourites={favourites} addMovieToFavourites={this.addMovieToFavourites} />
