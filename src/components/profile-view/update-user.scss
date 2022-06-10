@@ -1,0 +1,39 @@
+$background-color: #b7e5ff;
+$text-color: #33383a;
+$main-color: #000000;
+
+:root {
+  --fontsize-movie-title: 30px;
+  --fontweight-movie-title: 400;
+  --fontsize-movie-year: 20px;
+  --fontweight-movie-year: 300;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+#update-user {
+  border-color: $main-color;
+  border-width: 2px;
+  min-height: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#title {
+  margin-top: 20;
+  text-align: center;
+  font-size: var(--fontsize-movie-title);
+  font-weight: var(--fontweight-movie-title);
+}
+
+#update-user-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  border: black;
+}
