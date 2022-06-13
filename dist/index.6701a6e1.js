@@ -40423,6 +40423,7 @@ function movies(state = [], action) {
 function user(state = "", action) {
     switch(action.type){
         case _actions.SET_USER:
+            console.log("SET_USER reducer reached");
             return action.value || localStorage.getItem("user") || "";
         case _actions.ADD_FAVMOVIE:
             return action.value;
@@ -40482,6 +40483,7 @@ function setFilter(value) {
     };
 }
 function setUser(value) {
+    console.log("SET_USER action triggered");
     return {
         type: SET_USER,
         value
@@ -40535,7 +40537,8 @@ class MainView extends _reactDefault.default.Component {
         // Initial state is set to null
         this.state = {
             // movies: [],
-            user: null
+            user: null,
+            favourites: []
         };
     }
     getMovies(token) {
@@ -40592,22 +40595,23 @@ class MainView extends _reactDefault.default.Component {
             user: null
         });
     }
-    // addMovieToFavourites = (movieId) => {
-    //   let token = localStorage.getItem("token");
-    //   // console.log(this.state.user, movieId)
-    //   axios.post(`https://movies2022app.herokuapp.com/users/${this.state.user}/movies/${movieId}`, {}, {
-    //     headers: { Authorization: "Bearer " + token }
-    //   })
-    //     .then(response => {
-    //       this.setState({
-    //         favourites: this.state.favourites.concat(movieId)
-    //       })
-    //       alert("successfully added")
-    //     })
-    //     .catch(function (error) {
-    //       console.log(error);
-    //     });
-    // }
+    addMovieToFavourites = (movieId)=>{
+        let token = localStorage.getItem("token");
+        // console.log(this.state.user, movieId)
+        _axiosDefault.default.post(`https://movies2022app.herokuapp.com/users/${this.state.user}/movies/${movieId}`, {
+        }, {
+            headers: {
+                Authorization: "Bearer " + token
+            }
+        }).then((response)=>{
+            this.setState({
+                favourites: this.state.favourites.concat(movieId)
+            });
+            alert("successfully added");
+        }).catch(function(error) {
+            console.log(error);
+        });
+    };
     render() {
         let { movies  } = this.props;
         const { user , favourites  } = this.state;
@@ -46505,15 +46509,17 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRedux = require("react-redux");
 var _reactBootstrap = require("react-bootstrap");
 var _actions = require("../../actions/actions");
+var _visibilityFilterInputScss = require("./visibility-filter-input.scss");
 function VisibilityFilterInput(props) {
     return(/*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Control, {
+        id: "search",
         onChange: (e)=>props.setFilter(e.target.value)
         ,
         value: props.visibilityFilter,
         placeholder: "filter",
         __source: {
             fileName: "src/components/visibility-filter-input/visibility-filter-input.jsx",
-            lineNumber: 7
+            lineNumber: 8
         },
         __self: this
     }));
@@ -46530,7 +46536,7 @@ $RefreshReg$(_c, "VisibilityFilterInput");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-redux":"2L0if","react-bootstrap":"h2YVd","../../actions/actions":"1Ttfj","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt"}],"26aCt":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-redux":"2L0if","react-bootstrap":"h2YVd","../../actions/actions":"1Ttfj","./visibility-filter-input.scss":"3ZOIV","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt"}],"3ZOIV":[function() {},{}],"26aCt":[function(require,module,exports) {
 "use strict";
 var Refresh = require('react-refresh/runtime');
 function debounce(func, delay) {
@@ -46665,6 +46671,8 @@ parcelHelpers.export(exports, "MovieCard", ()=>MovieCard
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _reactBootstrap = require("react-bootstrap");
@@ -46676,14 +46684,14 @@ class MovieCard extends _reactDefault.default.Component {
         // Initial state is set to null
         this.state = {
             // movies: [],
-            // user: null,
+            user: null,
             favourites: []
         };
     }
     addMovieToFavourites = (movieId)=>{
         let token = localStorage.getItem("token");
         // console.log(this.state.user, movieId)
-        axios.post(`https://movies2022app.herokuapp.com/users/${this.state.user}/movies/${movieId}`, {
+        _axiosDefault.default.post(`https://movies2022app.herokuapp.com/users/${this.state.user}/movies/${movieId}`, {
         }, {
             headers: {
                 Authorization: "Bearer " + token
@@ -46699,7 +46707,7 @@ class MovieCard extends _reactDefault.default.Component {
     };
     render() {
         const { favourites  } = this.state;
-        const { movieData , addMovieToFavourites  } = this.props;
+        const { movieData  } = this.props;
         // console.log(favourites)
         const hideAddToFavouritesButton = favourites.find((id)=>id === movieData._id
         );
@@ -46708,7 +46716,7 @@ class MovieCard extends _reactDefault.default.Component {
             id: "movie-card",
             __source: {
                 fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 47
+                lineNumber: 48
             },
             __self: this,
             children: [
@@ -46718,14 +46726,14 @@ class MovieCard extends _reactDefault.default.Component {
                     crossOrigin: "true",
                     __source: {
                         fileName: "src/components/movie-card/movie-card.jsx",
-                        lineNumber: 48
+                        lineNumber: 49
                     },
                     __self: this
                 }),
                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
                     __source: {
                         fileName: "src/components/movie-card/movie-card.jsx",
-                        lineNumber: 49
+                        lineNumber: 50
                     },
                     __self: this,
                     children: [
@@ -46734,7 +46742,7 @@ class MovieCard extends _reactDefault.default.Component {
                             id: "movie-title",
                             __source: {
                                 fileName: "src/components/movie-card/movie-card.jsx",
-                                lineNumber: 50
+                                lineNumber: 51
                             },
                             __self: this,
                             children: movieData.Title
@@ -46744,7 +46752,7 @@ class MovieCard extends _reactDefault.default.Component {
                             id: "year",
                             __source: {
                                 fileName: "src/components/movie-card/movie-card.jsx",
-                                lineNumber: 51
+                                lineNumber: 52
                             },
                             __self: this,
                             children: movieData.Year
@@ -46753,14 +46761,14 @@ class MovieCard extends _reactDefault.default.Component {
                             to: `/movies/${movieData._id}`,
                             __source: {
                                 fileName: "src/components/movie-card/movie-card.jsx",
-                                lineNumber: 52
+                                lineNumber: 53
                             },
                             __self: this,
                             children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
                                 variant: "link",
                                 __source: {
                                     fileName: "src/components/movie-card/movie-card.jsx",
-                                    lineNumber: 53
+                                    lineNumber: 54
                                 },
                                 __self: this,
                                 children: "see more"
@@ -46768,11 +46776,11 @@ class MovieCard extends _reactDefault.default.Component {
                         }),
                         hideAddToFavouritesButton ? "In favourites list" : /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
                             variant: "dark",
-                            onClick: ()=>addMovieToFavourites(movieData._id)
+                            onClick: ()=>this.addMovieToFavourites(movieData._id)
                             ,
                             __source: {
                                 fileName: "src/components/movie-card/movie-card.jsx",
-                                lineNumber: 55
+                                lineNumber: 56
                             },
                             __self: this,
                             children: "Add to Favourites"
@@ -46805,7 +46813,7 @@ MovieCard.propTypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","react-bootstrap":"h2YVd","react-router-dom":"cpyQW","./movie-card.scss":"cF5gT","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt"}],"cF5gT":[function() {},{}],"jyMAr":[function() {},{}],"aP2YV":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","react-bootstrap":"h2YVd","react-router-dom":"cpyQW","./movie-card.scss":"cF5gT","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt","axios":"iYoWk"}],"cF5gT":[function() {},{}],"jyMAr":[function() {},{}],"aP2YV":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8dd4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
