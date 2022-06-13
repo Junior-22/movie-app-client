@@ -29,6 +29,7 @@ function movies(state = [], action) {
 function user(state = "", action) {
   switch (action.type) {
     case SET_USER:
+      console.log("SET_USER reducer reached")
       return action.value || localStorage.getItem("user") || "";
     case ADD_FAVMOVIE:
       return action.value;
