@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import PropTypes from "prop-types";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom"
@@ -12,7 +13,7 @@ export class MovieCard extends React.Component {
     // Initial state is set to null
     this.state = {
       // movies: [],
-      // user: null,
+      user: null,
       favourites: []
     };
   }
@@ -38,7 +39,7 @@ export class MovieCard extends React.Component {
 
     const { favourites } = this.state;
 
-    const { movieData, addMovieToFavourites } = this.props;
+    const { movieData } = this.props;
     // console.log(favourites)
 
     const hideAddToFavouritesButton = favourites.find(id => id === movieData._id)
@@ -52,7 +53,7 @@ export class MovieCard extends React.Component {
           <Link to={`/movies/${movieData._id}`}>
             <Button variant="link">see more</Button>
           </Link>
-          {hideAddToFavouritesButton ? "In favourites list" : <Button variant="dark" onClick={() => addMovieToFavourites(movieData._id)}>Add to Favourites</Button>}
+          {hideAddToFavouritesButton ? "In favourites list" : <Button variant="dark" onClick={() => this.addMovieToFavourites(movieData._id)}>Add to Favourites</Button>}
         </Card.Body>
       </Card>
     );
