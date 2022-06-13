@@ -25,7 +25,7 @@ class MainView extends React.Component {
     this.state = {
       // movies: [],
       user: null,
-      // favourites: []
+      favourites: []
     };
   }
 
@@ -90,22 +90,22 @@ class MainView extends React.Component {
     });
   }
 
-  // addMovieToFavourites = (movieId) => {
-  //   let token = localStorage.getItem("token");
-  //   // console.log(this.state.user, movieId)
-  //   axios.post(`https://movies2022app.herokuapp.com/users/${this.state.user}/movies/${movieId}`, {}, {
-  //     headers: { Authorization: "Bearer " + token }
-  //   })
-  //     .then(response => {
-  //       this.setState({
-  //         favourites: this.state.favourites.concat(movieId)
-  //       })
-  //       alert("successfully added")
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error);
-  //     });
-  // }
+  addMovieToFavourites = (movieId) => {
+    let token = localStorage.getItem("token");
+    // console.log(this.state.user, movieId)
+    axios.post(`https://movies2022app.herokuapp.com/users/${this.state.user}/movies/${movieId}`, {}, {
+      headers: { Authorization: "Bearer " + token }
+    })
+      .then(response => {
+        this.setState({
+          favourites: this.state.favourites.concat(movieId)
+        })
+        alert("successfully added")
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
 
   render() {
     let { movies } = this.props;
