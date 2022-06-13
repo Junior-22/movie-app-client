@@ -6,8 +6,39 @@ import "./movie-card.scss";
 
 // display movies rendered on MainView
 export class MovieCard extends React.Component {
+
+  constructor() {
+    super();
+    // Initial state is set to null
+    this.state = {
+      // movies: [],
+      // user: null,
+      favourites: []
+    };
+  }
+
+  addMovieToFavourites = (movieId) => {
+    let token = localStorage.getItem("token");
+    // console.log(this.state.user, movieId)
+    axios.post(`https://movies2022app.herokuapp.com/users/${this.state.user}/movies/${movieId}`, {}, {
+      headers: { Authorization: "Bearer " + token }
+    })
+      .then(response => {
+        this.setState({
+          favourites: this.state.favourites.concat(movieId)
+        })
+        alert("successfully added")
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   render() {
-    const { movieData, addMovieToFavourites, favourites } = this.props;
+
+    const { favourites } = this.state;
+
+    const { movieData, addMovieToFavourites } = this.props;
     // console.log(favourites)
 
     const hideAddToFavouritesButton = favourites.find(id => id === movieData._id)
