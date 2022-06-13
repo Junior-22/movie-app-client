@@ -40654,7 +40654,9 @@ class MainView extends _reactDefault.default.Component {
                                 //   </Col>
                                 // ))
                                 return(/*#__PURE__*/ _jsxRuntime.jsx(_movieListDefault.default, {
-                                    movies: movies
+                                    movies: movies,
+                                    favourites: favourites,
+                                    addMovieToFavourites: this.addMovieToFavourites
                                 }));
                             },
                             __source: {
