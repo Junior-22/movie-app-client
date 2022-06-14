@@ -40425,10 +40425,6 @@ function user(state = "", action) {
         case _actions.SET_USER:
             console.log("SET_USER reducer reached");
             return action.value || localStorage.getItem("user") || "";
-        // case ADD_FAVMOVIE:
-        //   return action.value;
-        // case DEL_FAVMOVIE:
-        //   return action.value;
         default:
             return state;
     }
@@ -40449,27 +40445,13 @@ parcelHelpers.export(exports, "SET_FILTER", ()=>SET_FILTER
 );
 parcelHelpers.export(exports, "SET_USER", ()=>SET_USER
 );
-// export const ADD_FAVMOVIE = "ADD_FAVMOVIE";
-// export const DEL_FAVMOVIE = "DEL_FAVMOVIE";
 // action creators
 parcelHelpers.export(exports, "setMovies", ()=>setMovies
 );
 parcelHelpers.export(exports, "setFilter", ()=>setFilter
 );
 parcelHelpers.export(exports, "setUser", ()=>setUser
-) // export function addFavMovie(value) {
- //   return {
- //     type: ADD_FAVMOVIE,
- //     value
- //   }
- // }
- // export function delFavMovie(value) {
- //   return {
- //     type: DEL_FAVMOVIE,
- //     value
- //   }
- // }
-;
+);
 const SET_MOVIES = "SET_MOVIES";
 const SET_FILTER = "SET_FILTER";
 const SET_USER = "SET_USER";
