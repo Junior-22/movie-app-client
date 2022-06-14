@@ -2,8 +2,6 @@
 export const SET_MOVIES = "SET_MOVIES";
 export const SET_FILTER = "SET_FILTER";
 export const SET_USER = "SET_USER";
-// export const ADD_FAVMOVIE = "ADD_FAVMOVIE";
-// export const DEL_FAVMOVIE = "DEL_FAVMOVIE";
 
 
 // action creators
@@ -29,17 +27,3 @@ export function setUser(value) {
     value
   }
 }
-
-// export function addFavMovie(value) {
-//   return {
-//     type: ADD_FAVMOVIE,
-//     value
-//   }
-// }
-
-// export function delFavMovie(value) {
-//   return {
-//     type: DEL_FAVMOVIE,
-//     value
-//   }
-// }
