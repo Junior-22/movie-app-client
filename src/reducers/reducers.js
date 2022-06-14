@@ -3,8 +3,8 @@ import {
   SET_MOVIES,
   SET_FILTER,
   SET_USER,
-  ADD_FAVMOVIE,
-  DEL_FAVMOVIE
+  // ADD_FAVMOVIE,
+  // DEL_FAVMOVIE
 } from "../actions/actions";
 
 function visibilityFilter(state = "", action) {
@@ -31,10 +31,10 @@ function user(state = "", action) {
     case SET_USER:
       console.log("SET_USER reducer reached")
       return action.value || localStorage.getItem("user") || "";
-    case ADD_FAVMOVIE:
-      return action.value;
-    case DEL_FAVMOVIE:
-      return action.value;
+    // case ADD_FAVMOVIE:
+    //   return action.value;
+    // case DEL_FAVMOVIE:
+    //   return action.value;
     default:
       return state;
   }
