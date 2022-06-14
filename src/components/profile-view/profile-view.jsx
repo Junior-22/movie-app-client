@@ -5,8 +5,11 @@ import { UserData } from "./user-data";
 import { UpdatedUser } from "./update-user";
 import { FavouriteMovies } from "./favourite-movies";
 import "./profile-view.scss"
+import { setUser } from "../../actions/actions";
+import { connect } from "react-redux";
 
-export function ProfileView(props) {
+
+function ProfileView(props) {
   // console.log(props)
 
   const [userData, setUserData] = useState({});
@@ -120,3 +123,11 @@ export function ProfileView(props) {
     </Container>
   );
 }
+
+let mapStateToProps = state => {
+  return {
+    user: state.user
+  }
+}
+
+export default connect(mapStateToProps, { setUser })(ProfileView);
