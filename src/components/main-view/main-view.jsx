@@ -24,7 +24,7 @@ class MainView extends React.Component {
     // Initial state is set to null
     this.state = {
       // movies: [],
-      user: null,
+      // user: null,
       favourites: []
     };
   }
