@@ -17,7 +17,7 @@ function visibilityFilter(state = "", action) {
 function movies(state = [], action) {
   switch (action.type) {
     case SET_MOVIES:
-      console.log("SET_MOVIES reducer reached")
+      // console.log("SET_MOVIES reducer reached")
       return action.value;
     default:
       return state;
@@ -27,7 +27,7 @@ function movies(state = [], action) {
 function user(state = "", action) {
   switch (action.type) {
     case SET_USER:
-      console.log("SET_USER reducer reached")
+      // console.log("SET_USER reducer reached")
       return action.value || localStorage.getItem("user") || "";
     default:
       return state;
