@@ -956,7 +956,6 @@ var _mainViewDefault = parcelHelpers.interopDefault(_mainView);
 // import statement indicating need to bundle './index.scss'
 var _indexScss = require("./index.scss");
 const movieAppStore = _redux.createStore(_reducersDefault.default, _reduxDevtoolsExtension.devToolsEnhancer());
-// movieAppStore.dispatch({ type: "ADD_MOVIE" });
 // Main component (will eventually use others)
 class MovieApplication extends _reactDefault.default.Component {
     render() {
@@ -964,20 +963,20 @@ class MovieApplication extends _reactDefault.default.Component {
             store: movieAppStore,
             __source: {
                 fileName: "src/index.jsx",
-                lineNumber: 20
+                lineNumber: 19
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
                 className: "movie-app",
                 __source: {
                     fileName: "src/index.jsx",
-                    lineNumber: 21
+                    lineNumber: 20
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsx(_mainViewDefault.default, {
                     __source: {
                         fileName: "src/index.jsx",
-                        lineNumber: 22
+                        lineNumber: 21
                     },
                     __self: this
                 })
