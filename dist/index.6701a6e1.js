@@ -956,6 +956,7 @@ var _mainViewDefault = parcelHelpers.interopDefault(_mainView);
 // import statement indicating need to bundle './index.scss'
 var _indexScss = require("./index.scss");
 const movieAppStore = _redux.createStore(_reducersDefault.default, _reduxDevtoolsExtension.devToolsEnhancer());
+// movieAppStore.dispatch({ type: "ADD_MOVIE" });
 // Main component (will eventually use others)
 class MovieApplication extends _reactDefault.default.Component {
     render() {
@@ -963,20 +964,20 @@ class MovieApplication extends _reactDefault.default.Component {
             store: movieAppStore,
             __source: {
                 fileName: "src/index.jsx",
-                lineNumber: 19
+                lineNumber: 20
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Container, {
                 className: "movie-app",
                 __source: {
                     fileName: "src/index.jsx",
-                    lineNumber: 20
+                    lineNumber: 21
                 },
                 __self: this,
                 children: /*#__PURE__*/ _jsxRuntime.jsx(_mainViewDefault.default, {
                     __source: {
                         fileName: "src/index.jsx",
-                        lineNumber: 21
+                        lineNumber: 22
                     },
                     __self: this
                 })
@@ -40414,7 +40415,7 @@ function visibilityFilter(state = "", action) {
 function movies(state = [], action) {
     switch(action.type){
         case _actions.SET_MOVIES:
-            console.log("SET_MOVIES reducer reached");
+            // console.log("SET_MOVIES reducer reached")
             return action.value;
         default:
             return state;
@@ -40423,7 +40424,7 @@ function movies(state = [], action) {
 function user(state = "", action) {
     switch(action.type){
         case _actions.SET_USER:
-            console.log("SET_USER reducer reached");
+            // console.log("SET_USER reducer reached")
             return action.value || localStorage.getItem("user") || "";
         default:
             return state;
@@ -40456,7 +40457,7 @@ const SET_MOVIES = "SET_MOVIES";
 const SET_FILTER = "SET_FILTER";
 const SET_USER = "SET_USER";
 function setMovies(value) {
-    console.log("SET_MOVIES action triggered");
+    // console.log("SET_MOVIES action triggered")
     return {
         type: SET_MOVIES,
         value
@@ -40469,7 +40470,7 @@ function setFilter(value) {
     };
 }
 function setUser(value) {
-    console.log("SET_USER action triggered");
+    // console.log("SET_USER action triggered")
     return {
         type: SET_USER,
         value
@@ -40512,7 +40513,7 @@ class MainView extends _reactDefault.default.Component {
         // Initial state is set to null
         this.state = {
             // movies: [],
-            user: null,
+            // user: null,
             favourites: []
         };
     }
@@ -40591,8 +40592,8 @@ class MainView extends _reactDefault.default.Component {
         });
     };
     render() {
-        let { movies , user  } = this.props;
-        const { favourites  } = this.state;
+        let { movies , user , favourites  } = this.props;
+        // const { favourites } = this.state;
         return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
@@ -46664,7 +46665,7 @@ class MovieCard extends _reactDefault.default.Component {
         // Initial state is set to null
         this.state = {
             // movies: [],
-            user: null,
+            user: localStorage.getItem("user"),
             favourites: []
         };
     }
@@ -46687,7 +46688,7 @@ class MovieCard extends _reactDefault.default.Component {
     };
     render() {
         const { favourites  } = this.state;
-        const { movieData  } = this.props;
+        const { movieData , addMovieToFavourites  } = this.props;
         // console.log(favourites)
         const hideAddToFavouritesButton = favourites.find((id)=>id === movieData._id
         );
@@ -48183,7 +48184,7 @@ $RefreshReg$(_c, "ProfileView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","axios":"iYoWk","react-bootstrap":"h2YVd","./user-data":"fwSkt","./update-user":"hBcEf","./favourite-movies":"eyuZB","./profile-view.scss":"gb0ga","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt","../../actions/actions":"1Ttfj","react-redux":"2L0if"}],"fwSkt":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","axios":"iYoWk","react-bootstrap":"h2YVd","./user-data":"fwSkt","./update-user":"hBcEf","./favourite-movies":"eyuZB","./profile-view.scss":"gb0ga","../../actions/actions":"1Ttfj","react-redux":"2L0if","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt"}],"fwSkt":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b143 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
