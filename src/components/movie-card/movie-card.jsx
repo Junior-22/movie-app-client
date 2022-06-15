@@ -13,7 +13,7 @@ export class MovieCard extends React.Component {
     // Initial state is set to null
     this.state = {
       // movies: [],
-      user: null,
+      user: localStorage.getItem("user"),
       favourites: []
     };
   }
