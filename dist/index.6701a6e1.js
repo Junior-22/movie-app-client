@@ -40591,8 +40591,8 @@ class MainView extends _reactDefault.default.Component {
         });
     };
     render() {
-        let { movies , user , favourites  } = this.props;
-        // const { favourites } = this.state;
+        let { movies , user  } = this.props;
+        const { favourites  } = this.state;
         return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
@@ -46687,7 +46687,7 @@ class MovieCard extends _reactDefault.default.Component {
     };
     render() {
         const { favourites  } = this.state;
-        const { movieData , addMovieToFavourites  } = this.props;
+        const { movieData  } = this.props;
         // console.log(favourites)
         const hideAddToFavouritesButton = favourites.find((id)=>id === movieData._id
         );
