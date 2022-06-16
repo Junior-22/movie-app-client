@@ -2,10 +2,18 @@
 
 The client-side of my movie app. The app will display a list of all movies available in the database to the users. Users will be able to search movies by title, genre and director. Users will also be able to register, create a list of favourite movies, delete favourite movies and deregister from the app.
 
-<b>Technologies used</b>
+<b>Tools</b>
 
 - React
+- React-Redux
 - Parcel
+- Javascript
+- React- Bootstrap
+- Redux
+- HTML
+- CSS
+- React-Router-Dom
+- Moment
 
 <b>Usage</b>
 
