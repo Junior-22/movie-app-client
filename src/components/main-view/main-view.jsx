@@ -15,6 +15,7 @@ import { MovieView } from "../movie-view/movie-view";
 import { DirectorView } from "../director-view/director-view";
 import { GenreView } from "../genre-view/genre-view";
 import ProfileView from "../profile-view/profile-view";
+import { FooterView } from "../footer-view/footer-view";
 
 
 class MainView extends React.Component {
@@ -205,8 +206,8 @@ class MainView extends React.Component {
               <UserUpdate user={user} onBackClick={() => history.goBack()} />
             </Col>
           }} />
-
         </Row>
+        <FooterView />
       </Router>
     );
   }
