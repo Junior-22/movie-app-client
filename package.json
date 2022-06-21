@@ -5,10 +5,7 @@
   "source": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.html --no-cache",
-    "build": "react-scripts-build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "parcel src/index.html --no-cache"
   },
   "repository": {
     "type": "git",
@@ -19,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Junior-22/movie-app-client/issues"
   },
-  "homepage": "https://Junior-22.github.io/movie-app-client",
+  "homepage": "https://github.com/Junior-22/movie-app-client#readme",
   "dependencies": {
     "axios": "^0.27.2",
     "moment": "^2.29.3",
@@ -34,7 +31,6 @@
     "redux-devtools-extension": "^2.13.9"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-rc.0",
-    "gh-pages": "^4.0.0"
+    "@parcel/transformer-sass": "^2.0.0-rc.0"
   }
 }
