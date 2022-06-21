@@ -1,0 +1,28 @@
+$background-color: #11aaff;
+$text-color: #33383a;
+$main-color: #11aaff;
+
+:root {
+  --fontsize-navbar-brand: 30px;
+  --fontsize-navbar-link: 20px;
+  --fontweight-navbar-brand: 600;
+  --fontweight-navbar-link: 200;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.footer {
+  // background-color: $main-color;
+  margin-top: 50px;
+  // border: 5px;
+  // border-color: $text-color;
+}
+
+#text {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
