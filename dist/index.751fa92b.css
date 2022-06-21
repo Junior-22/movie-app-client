@@ -384,6 +384,27 @@
   background-color: #b7e5ff;
   border: #000000;
 }
+:root {
+  --fontsize-navbar-brand: 30px;
+  --fontsize-navbar-link: 20px;
+  --fontweight-navbar-brand: 600;
+  --fontweight-navbar-link: 200;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+#text {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
 .movie-app {
   color: #b7e5ff;
   margin-top: 100px;

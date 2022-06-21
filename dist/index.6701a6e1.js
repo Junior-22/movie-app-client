@@ -40506,6 +40506,7 @@ var _directorView = require("../director-view/director-view");
 var _genreView = require("../genre-view/genre-view");
 var _profileView = require("../profile-view/profile-view");
 var _profileViewDefault = parcelHelpers.interopDefault(_profileView);
+var _footerView = require("../footer-view/footer-view");
 class MainView extends _reactDefault.default.Component {
     constructor(){
         super();
@@ -40596,7 +40597,7 @@ class MainView extends _reactDefault.default.Component {
         return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 118
+                lineNumber: 119
             },
             __self: this,
             children: [
@@ -40604,7 +40605,7 @@ class MainView extends _reactDefault.default.Component {
                     user: user,
                     __source: {
                         fileName: "src/components/main-view/main-view.jsx",
-                        lineNumber: 119
+                        lineNumber: 120
                     },
                     __self: this
                 }),
@@ -40612,7 +40613,7 @@ class MainView extends _reactDefault.default.Component {
                     className: "main-view justify-content-md-center",
                     __source: {
                         fileName: "src/components/main-view/main-view.jsx",
-                        lineNumber: 120
+                        lineNumber: 121
                     },
                     __self: this,
                     children: [
@@ -40643,7 +40644,7 @@ class MainView extends _reactDefault.default.Component {
                             },
                             __source: {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 122
+                                lineNumber: 123
                             },
                             __self: this
                         }),
@@ -40662,7 +40663,7 @@ class MainView extends _reactDefault.default.Component {
                             },
                             __source: {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 138
+                                lineNumber: 139
                             },
                             __self: this
                         }),
@@ -40690,7 +40691,7 @@ class MainView extends _reactDefault.default.Component {
                             },
                             __source: {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 145
+                                lineNumber: 146
                             },
                             __self: this
                         }),
@@ -40719,7 +40720,7 @@ class MainView extends _reactDefault.default.Component {
                             },
                             __source: {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 157
+                                lineNumber: 158
                             },
                             __self: this
                         }),
@@ -40748,7 +40749,7 @@ class MainView extends _reactDefault.default.Component {
                             },
                             __source: {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 170
+                                lineNumber: 171
                             },
                             __self: this
                         }),
@@ -40775,7 +40776,7 @@ class MainView extends _reactDefault.default.Component {
                             },
                             __source: {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 183
+                                lineNumber: 184
                             },
                             __self: this
                         }),
@@ -40801,11 +40802,18 @@ class MainView extends _reactDefault.default.Component {
                             },
                             __source: {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 196
+                                lineNumber: 197
                             },
                             __self: this
                         })
                     ]
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx(_footerView.FooterView, {
+                    __source: {
+                        fileName: "src/components/main-view/main-view.jsx",
+                        lineNumber: 210
+                    },
+                    __self: this
                 })
             ]
         }));
@@ -40827,7 +40835,7 @@ exports.default = _reactRedux.connect(mapStateToProps, {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","axios":"iYoWk","react-redux":"2L0if","react-bootstrap":"h2YVd","react-router-dom":"cpyQW","../../actions/actions":"1Ttfj","../movie-list/movie-list":"6Cf7s","./main-view.scss":"jyMAr","../registration-view/registration-view":"aP2YV","../login-view/login-view":"054li","../navbar-view/navbar-view":"j0Dt2","../movie-view/movie-view":"ikZdr","../director-view/director-view":"ck15y","../genre-view/genre-view":"8WCoL","../profile-view/profile-view":"2E7Aw","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt"}],"iYoWk":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","axios":"iYoWk","react-redux":"2L0if","react-bootstrap":"h2YVd","react-router-dom":"cpyQW","../../actions/actions":"1Ttfj","../movie-list/movie-list":"6Cf7s","./main-view.scss":"jyMAr","../registration-view/registration-view":"aP2YV","../login-view/login-view":"054li","../navbar-view/navbar-view":"j0Dt2","../movie-view/movie-view":"ikZdr","../director-view/director-view":"ck15y","../genre-view/genre-view":"8WCoL","../profile-view/profile-view":"2E7Aw","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt","../footer-view/footer-view":"guTD3"}],"iYoWk":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"3QmO2"}],"3QmO2":[function(require,module,exports) {
@@ -52372,6 +52380,72 @@ $RefreshReg$(_c, "FavouriteMovies");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","react-router-dom":"cpyQW","./favourite-movies.scss":"c6rQy","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt"}],"c6rQy":[function() {},{}],"gb0ga":[function() {},{}],"jUTZ8":[function() {},{}]},["dyvfI","eCYxr","dLPEP"], "dLPEP", "parcelRequire6ce0")
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap":"h2YVd","react-router-dom":"cpyQW","./favourite-movies.scss":"c6rQy","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt"}],"c6rQy":[function() {},{}],"gb0ga":[function() {},{}],"guTD3":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4ca6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4ca6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "FooterView", ()=>FooterView
+);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactBootstrap = require("react-bootstrap");
+var _footerViewScss = require("./footer-view.scss");
+class FooterView extends _reactDefault.default.Component {
+    render() {
+        let year = new Date().getFullYear();
+        return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Navbar, {
+            collapseOnSelect: true,
+            expand: "sm",
+            className: "footer",
+            __source: {
+                fileName: "src/components/footer-view/footer-view.jsx",
+                lineNumber: 12
+            },
+            __self: this,
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Navbar.Toggle, {
+                    "aria-controls": "responsive-navbar-nav",
+                    __source: {
+                        fileName: "src/components/footer-view/footer-view.jsx",
+                        lineNumber: 13
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("footer", {
+                    __source: {
+                        fileName: "src/components/footer-view/footer-view.jsx",
+                        lineNumber: 14
+                    },
+                    __self: this,
+                    children: /*#__PURE__*/ _jsxRuntime.jsxs("p", {
+                        id: "text",
+                        __source: {
+                            fileName: "src/components/footer-view/footer-view.jsx",
+                            lineNumber: 15
+                        },
+                        __self: this,
+                        children: [
+                            "MOVIE-APP \xa9 ",
+                            year
+                        ]
+                    })
+                })
+            ]
+        }));
+    }
+}
+
+  $parcel$ReactRefreshHelpers$4ca6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"5iBJp","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"26aCt","./footer-view.scss":"e81VY","react-bootstrap":"h2YVd"}],"e81VY":[function() {},{}],"jUTZ8":[function() {},{}]},["dyvfI","eCYxr","dLPEP"], "dLPEP", "parcelRequire6ce0")
 
 //# sourceMappingURL=index.6701a6e1.js.map
