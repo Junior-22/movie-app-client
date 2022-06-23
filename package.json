@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "entry": "src/index.html",
-  "source": "src/index.html",
-  "main": "src/index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html --no-cache",
@@ -35,6 +33,7 @@
     "redux-devtools-extension": "^2.13.9"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.6.2"
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2"
   }
 }
