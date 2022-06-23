@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html --no-cache",
-    "build": "parcel build src/index.html"
+    "build:parcel": "parcel build src/index.html --public-url /",
+    "build": "npm run build:parcel && cp _redirects dist"
   },
   "repository": {
     "type": "git",
