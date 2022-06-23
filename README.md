@@ -29,7 +29,7 @@ After cloning the repository, apply the following steps
 - Pull requests are welcome
 
 
-Navigate the webpage <a href="https://movie-app-client.netlify.app/">here</a>
+Navigate to the webpage <a href="https://movie-app-client.netlify.app/" target="_blank">here</a>
 
 
 
