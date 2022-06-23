@@ -23,8 +23,6 @@
   "dependencies": {
     "axios": "^0.27.2",
     "moment": "^2.29.3",
-    "parcel": "^2.0.0-rc.0",
-    "parcel-bundler": "^1.12.5",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-bootstrap": "^2.4.0",
@@ -34,8 +32,5 @@
     "react-router-dom": "^5.3.3",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9"
-  },
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-rc.0"
   }
 }
