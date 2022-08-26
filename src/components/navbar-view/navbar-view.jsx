@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import "./navbar-view.scss";
 
@@ -39,6 +40,7 @@ export function NavbarView({ user }) {
           )}
           {!isAuth() && (
             <Nav.Link id="nav-link" href="/register">Sign-up</Nav.Link>
+            <Link to={`/register`}>Sign up</Link>
           )}
         </Nav>
 
