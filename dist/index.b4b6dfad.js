@@ -42809,20 +42809,22 @@ function NavbarView({ user  }) {
                             lineNumber: 39,
                             columnNumber: 13
                         }, this),
-                        !isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: `/register`,
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
-                                variant: "link",
-                                children: "register"
-                            }, void 0, false, {
-                                fileName: "src/components/navbar-view/navbar-view.jsx",
-                                lineNumber: 44,
-                                columnNumber: 15
-                            }, this)
+                        !isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                            id: "nav-link",
+                            href: "/register",
+                            children: "Sign-up"
                         }, void 0, false, {
                             fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 43,
+                            lineNumber: 42,
                             columnNumber: 13
+                        }, this),
+                        !isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: `/register`,
+                            children: "Register"
+                        }, void 0, false, {
+                            fileName: "src/components/navbar-view/navbar-view.jsx",
+                            lineNumber: 44,
+                            columnNumber: 26
                         }, this)
                     ]
                 }, void 0, true, {
