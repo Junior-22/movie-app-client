@@ -32,16 +32,20 @@ export function NavbarView({ user }) {
           {isAuth() && (
             <Nav.Link id="nav-link" href={`/users/${user}`}>{user}</Nav.Link>
           )}
+          {/* {!isAuth() && (
+            <Link id="nav-link" to={`/users/${user}`}>{user}</Link>
+          )} */}
           {isAuth() && (
             <Button id="nav-link" variant="link" onClick={() => { onLoggedOut() }}>Logout</Button>
           )}
           {!isAuth() && (
             <Nav.Link id="nav-link" href="/">Sign-in</Nav.Link>
           )}
-          {!isAuth() && (
+          {/* {!isAuth() && (
             <Nav.Link id="nav-link" href="/register">Sign-up</Nav.Link>
-          )}
-          {!isAuth() && (<Link to={`/register`}>Register</Link>
+          )} */}
+          {!isAuth() && (
+            <Link id="nav-link" to={`/register`}>Sign-up</Link>
           )}
           {/* <Link to={`/register`}>Sign up</Link> */}
         </Nav>

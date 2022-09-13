@@ -42797,7 +42797,7 @@ function NavbarView({ user  }) {
                             children: "Logout"
                         }, void 0, false, {
                             fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 36,
+                            lineNumber: 39,
                             columnNumber: 13
                         }, this),
                         !isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
@@ -42806,25 +42806,17 @@ function NavbarView({ user  }) {
                             children: "Sign-in"
                         }, void 0, false, {
                             fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 39,
-                            columnNumber: 13
-                        }, this),
-                        !isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
-                            id: "nav-link",
-                            href: "/register",
-                            children: "Sign-up"
-                        }, void 0, false, {
-                            fileName: "src/components/navbar-view/navbar-view.jsx",
                             lineNumber: 42,
                             columnNumber: 13
                         }, this),
                         !isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            id: "nav-link",
                             to: `/register`,
-                            children: "Register"
+                            children: "Sign-up"
                         }, void 0, false, {
                             fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 44,
-                            columnNumber: 26
+                            lineNumber: 48,
+                            columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
