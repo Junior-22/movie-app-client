@@ -39,7 +39,11 @@ export function NavbarView({ user }) {
             <Nav.Link id="nav-link" href="/">Sign-in</Nav.Link>
           )}
           {!isAuth() && (
-            <Nav.Link id="nav-link" href="/register">Sign-up</Nav.Link>
+
+            <Link to={`/register`}>
+              <Button variant="link">register</Button>
+            </Link>
+
           )}
           {/* {!isAuth() && (<Link to={`/register`}>Register</Link>
           )} */}
