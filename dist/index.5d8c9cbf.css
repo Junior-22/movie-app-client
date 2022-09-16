@@ -121,6 +121,10 @@
   font-weight: 200;
 }
 
+#nav-link:first-child {
+  margin-right: 20px;
+}
+
 :root {
   --fontsize-movie-title: 30px;
   --fontweight-movie-title: 600;

@@ -42779,16 +42779,16 @@ function NavbarView({ user  }) {
                     id: "nav",
                     className: "ms-auto",
                     children: [
-                        isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                        isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             id: "nav-link",
-                            href: `/users/${user}`,
+                            to: `/users/${user}`,
                             children: user
                         }, void 0, false, {
                             fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 33,
+                            lineNumber: 36,
                             columnNumber: 13
                         }, this),
-                        isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
+                        isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             id: "nav-link",
                             variant: "link",
                             onClick: ()=>{
@@ -42797,16 +42797,16 @@ function NavbarView({ user  }) {
                             children: "Logout"
                         }, void 0, false, {
                             fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 39,
+                            lineNumber: 42,
                             columnNumber: 13
                         }, this),
-                        !isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                        !isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             id: "nav-link",
-                            href: "/",
+                            to: "/",
                             children: "Sign-in"
                         }, void 0, false, {
                             fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 42,
+                            lineNumber: 48,
                             columnNumber: 13
                         }, this),
                         !isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -42815,7 +42815,7 @@ function NavbarView({ user  }) {
                             children: "Sign-up"
                         }, void 0, false, {
                             fileName: "src/components/navbar-view/navbar-view.jsx",
-                            lineNumber: 48,
+                            lineNumber: 54,
                             columnNumber: 13
                         }, this)
                     ]
