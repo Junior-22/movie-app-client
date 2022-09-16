@@ -29,17 +29,23 @@ export function NavbarView({ user }) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
         <Nav id="nav" className="ms-auto">
-          {isAuth() && (
+          {/* {isAuth() && (
             <Nav.Link id="nav-link" href={`/users/${user}`}>{user}</Nav.Link>
-          )}
-          {/* {!isAuth() && (
-            <Link id="nav-link" to={`/users/${user}`}>{user}</Link>
           )} */}
           {isAuth() && (
-            <Button id="nav-link" variant="link" onClick={() => { onLoggedOut() }}>Logout</Button>
+            <Link id="nav-link" to={`/users/${user}`}>{user}</Link>
           )}
-          {!isAuth() && (
+          {/* {isAuth() && (
+            <Button id="nav-link" variant="link" onClick={() => { onLoggedOut() }}>Logout</Button>
+          )} */}
+          {isAuth() && (
+            <Link id="nav-link" variant="link" onClick={() => { onLoggedOut() }}>Logout</Link>
+          )}
+          {/* {!isAuth() && (
             <Nav.Link id="nav-link" href="/">Sign-in</Nav.Link>
+          )} */}
+          {!isAuth() && (
+            <Link id="nav-link" to={"/"}>Sign-in</Link>
           )}
           {/* {!isAuth() && (
             <Nav.Link id="nav-link" href="/register">Sign-up</Nav.Link>
