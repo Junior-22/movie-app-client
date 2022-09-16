@@ -43,3 +43,7 @@ $main-color: #11aaff;
   font-weight: 200;
   color: $text-color;
 }
+
+#nav-link:first-child {
+  margin-right: 20px;
+}
